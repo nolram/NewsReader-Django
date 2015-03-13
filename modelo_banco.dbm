@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.7.1">
+<database name="newsreader" encoding="UTF8" lc-collate="pt_BR" lc-ctype="pt_BR">
+	<role name="postgres"/>
+	<tablespace name="pg_default"/>
+</database>
+
+<schema name="public" protected="true" rect-visible="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<sequence name="django_migrations_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="django_migrations">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="50" y="50"/>
+	<column name="id" not-null="true" default-value="nextval('django_migrations_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="app" not-null="true">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="255"/>
+	</column>
+	<column name="applied" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<constraint name="django_migrations_pkey" type="pk-constr" factor="100" table="public.django_migrations">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="Crawler_categorias_id_categoria_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_categorias">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="410" y="50"/>
+	<column name="id_categoria" not-null="true" default-value="nextval('&quot;Crawler_categorias_id_categoria_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="categoria" not-null="true">
+		<type name="character varying" length="100"/>
+	</column>
+	<constraint name="Crawler_categorias_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_categorias&quot;">
+		<columns names="id_categoria" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_categorias_256d016a" table="public.&quot;Crawler_categorias&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="categoria"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Crawler_linksrss_id_links_rss_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_linksrss">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1806" y="758"/>
+	<column name="id_links_rss" not-null="true" default-value="nextval('&quot;Crawler_linksrss_id_links_rss_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="link_rss" not-null="true">
+		<type name="character varying" length="200"/>
+	</column>
+	<column name="data_adicionado" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="data_modificado" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="fk_sites_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="Crawler_linksrss_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_linksrss&quot;">
+		<columns names="id_links_rss" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_linksrss_a056fc81" table="public.&quot;Crawler_linksrss&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="link_rss"/>
+		</idxelement>
+	</index>
+	<index name="crawler_linksrss_75705b4a" table="public.&quot;Crawler_linksrss&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_sites_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Crawler_postagens_id_postagem_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_postagens">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="2234" y="282"/>
+	<column name="id_postagem" not-null="true" default-value="nextval('&quot;Crawler_postagens_id_postagem_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="titulo" not-null="true">
+		<type name="character varying" length="500"/>
+	</column>
+	<column name="link" not-null="true">
+		<type name="character varying" length="200"/>
+	</column>
+	<column name="texto">
+		<type name="text"/>
+	</column>
+	<column name="data_adicionado" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="data_modificado" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="fk_site_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="Crawler_postagens_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_postagens&quot;">
+		<columns names="id_postagem" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_postagens_2a304a13" table="public.&quot;Crawler_postagens&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="link"/>
+		</idxelement>
+	</index>
+	<index name="crawler_postagens_f3dd935b" table="public.&quot;Crawler_postagens&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_site_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Crawler_sites_id_sites_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_sites">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1782" y="26"/>
+	<column name="id_sites" not-null="true" default-value="nextval('&quot;Crawler_sites_id_sites_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="titulo" not-null="true">
+		<type name="character varying" length="150"/>
+	</column>
+	<column name="descricao" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="link" not-null="true">
+		<type name="character varying" length="200"/>
+	</column>
+	<column name="logo">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="data_adicionado" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="data_modificado" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<constraint name="Crawler_sites_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_sites&quot;">
+		<columns names="id_sites" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_sites_9fef7d81" table="public.&quot;Crawler_sites&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="titulo"/>
+		</idxelement>
+	</index>
+	<index name="crawler_sites_2a304a13" table="public.&quot;Crawler_sites&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="link"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Crawler_sitescategorias_id_sites_categorias_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_sitescategorias">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1348" y="61.2"/>
+	<column name="id_sites_categorias" not-null="true" default-value="nextval('&quot;Crawler_sitescategorias_id_sites_categorias_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="fk_categoria_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="fk_site_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="Crawler_sitescategorias_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_sitescategorias&quot;">
+		<columns names="id_sites_categorias" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_sitescategorias_cb377813" table="public.&quot;Crawler_sitescategorias&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_categoria_id"/>
+		</idxelement>
+	</index>
+	<index name="crawler_sitescategorias_f3dd935b" table="public.&quot;Crawler_sitescategorias&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_site_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Crawler_tags_id_tag_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_tags">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1582.77" y="221.2"/>
+	<column name="id_tag" not-null="true" default-value="nextval('&quot;Crawler_tags_id_tag_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="tag" not-null="true">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="contador" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="Crawler_tags_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_tags&quot;">
+		<columns names="id_tag" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="Crawler_tags_contador_check" type="ck-constr" table="public.&quot;Crawler_tags&quot;">
+			<expression><![CDATA[(contador >= 0)]]></expression>
+	</constraint>
+	<constraint name="Crawler_tags_tag_4b29bf3b7d97ef32_uniq" type="uq-constr" factor="100" table="public.&quot;Crawler_tags&quot;">
+		<columns names="tag" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_tags_e4d23e84" table="public.&quot;Crawler_tags&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="tag"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Crawler_tagspostagens_id_tags_postagens_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Crawler_tagspostagens">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1849.77" y="539.2"/>
+	<column name="id_tags_postagens" not-null="true" default-value="nextval('&quot;Crawler_tagspostagens_id_tags_postagens_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="fk_postagem_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="fk_tag_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="Crawler_tagspostagens_pkey" type="pk-constr" factor="100" table="public.&quot;Crawler_tagspostagens&quot;">
+		<columns names="id_tags_postagens" ref-type="src-columns"/>
+	</constraint>
+	<index name="crawler_tagspostagens_6d920701" table="public.&quot;Crawler_tagspostagens&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_postagem_id"/>
+		</idxelement>
+	</index>
+	<index name="crawler_tagspostagens_7ec88344" table="public.&quot;Crawler_tagspostagens&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_tag_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="django_content_type_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="django_content_type">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1517.53" y="563.2"/>
+	<column name="id" not-null="true" default-value="nextval('django_content_type_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="app_label" not-null="true">
+		<type name="character varying" length="100"/>
+	</column>
+	<column name="model" not-null="true">
+		<type name="character varying" length="100"/>
+	</column>
+	<constraint name="django_content_type_pkey" type="pk-constr" factor="100" table="public.django_content_type">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="django_content_type_app_label_45f3b1d93ec8c61c_uniq" type="uq-constr" factor="100" table="public.django_content_type">
+		<columns names="app_label,model" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="auth_permission_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="auth_permission">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1074.53" y="129.2"/>
+	<column name="id" not-null="true" default-value="nextval('auth_permission_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="content_type_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="codename" not-null="true">
+		<type name="character varying" length="100"/>
+	</column>
+	<constraint name="auth_permission_pkey" type="pk-constr" factor="100" table="public.auth_permission">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="auth_permission_content_type_id_codename_key" type="uq-constr" factor="100" table="public.auth_permission">
+		<columns names="content_type_id,codename" ref-type="src-columns"/>
+	</constraint>
+	<index name="auth_permission_417f1b1c" table="public.auth_permission"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="content_type_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="auth_group_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="auth_group">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="50" y="400.4"/>
+	<column name="id" not-null="true" default-value="nextval('auth_group_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="80"/>
+	</column>
+	<constraint name="auth_group_pkey" type="pk-constr" factor="100" table="public.auth_group">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="auth_group_name_key" type="uq-constr" factor="100" table="public.auth_group">
+		<columns names="name" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="auth_group_permissions_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="auth_group_permissions">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="55" y="598.4"/>
+	<column name="id" not-null="true" default-value="nextval('auth_group_permissions_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="group_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="permission_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="auth_group_permissions_pkey" type="pk-constr" factor="100" table="public.auth_group_permissions">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="auth_group_permissions_group_id_permission_id_key" type="uq-constr" factor="100" table="public.auth_group_permissions">
+		<columns names="group_id,permission_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="auth_group_permissions_0e939a4f" table="public.auth_group_permissions"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="group_id"/>
+		</idxelement>
+	</index>
+	<index name="auth_group_permissions_8373b171" table="public.auth_group_permissions"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="permission_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="auth_user_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="auth_user">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="388.766" y="462.4"/>
+	<column name="id" not-null="true" default-value="nextval('auth_user_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="password" not-null="true">
+		<type name="character varying" length="128"/>
+	</column>
+	<column name="last_login" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="is_superuser" not-null="true">
+		<type name="boolean"/>
+	</column>
+	<column name="username" not-null="true">
+		<type name="character varying" length="30"/>
+	</column>
+	<column name="first_name" not-null="true">
+		<type name="character varying" length="30"/>
+	</column>
+	<column name="last_name" not-null="true">
+		<type name="character varying" length="30"/>
+	</column>
+	<column name="email" not-null="true">
+		<type name="character varying" length="75"/>
+	</column>
+	<column name="is_staff" not-null="true">
+		<type name="boolean"/>
+	</column>
+	<column name="is_active" not-null="true">
+		<type name="boolean"/>
+	</column>
+	<column name="date_joined" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<constraint name="auth_user_pkey" type="pk-constr" factor="100" table="public.auth_user">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="auth_user_username_key" type="uq-constr" factor="100" table="public.auth_user">
+		<columns names="username" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="auth_user_groups_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="auth_user_groups">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="506.766" y="190.4"/>
+	<column name="id" not-null="true" default-value="nextval('auth_user_groups_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="group_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="auth_user_groups_pkey" type="pk-constr" factor="100" table="public.auth_user_groups">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="auth_user_groups_user_id_group_id_key" type="uq-constr" factor="100" table="public.auth_user_groups">
+		<columns names="user_id,group_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="auth_user_groups_e8701ad4" table="public.auth_user_groups"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+	</index>
+	<index name="auth_user_groups_0e939a4f" table="public.auth_user_groups"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="group_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="auth_user_user_permissions_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="auth_user_user_permissions">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1123.53" y="538.4"/>
+	<column name="id" not-null="true" default-value="nextval('auth_user_user_permissions_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="permission_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="auth_user_user_permissions_pkey" type="pk-constr" factor="100" table="public.auth_user_user_permissions">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="auth_user_user_permissions_user_id_permission_id_key" type="uq-constr" factor="100" table="public.auth_user_user_permissions">
+		<columns names="user_id,permission_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="auth_user_user_permissions_e8701ad4" table="public.auth_user_user_permissions"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+	</index>
+	<index name="auth_user_user_permissions_8373b171" table="public.auth_user_user_permissions"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="permission_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="Site_providers_id_provider_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="Site_providers">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="18" y="707.8"/>
+	<column name="id_provider" not-null="true" default-value="nextval('&quot;Site_providers_id_provider_seq&quot;'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="nome" not-null="true">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="key">
+		<type name="character varying" length="500"/>
+	</column>
+	<column name="secret_key">
+		<type name="character varying" length="500"/>
+	</column>
+	<constraint name="Site_providers_pkey" type="pk-constr" factor="100" table="public.&quot;Site_providers&quot;">
+		<columns names="id_provider" ref-type="src-columns"/>
+	</constraint>
+	<index name="site_providers_666ac576" table="public.&quot;Site_providers&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="nome"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="Site_usuariosprovider">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="559" y="733.8"/>
+	<column name="id_usuario_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<column name="id_provider" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="data_registro" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="data_atualizacao" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="fk_provider_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="Site_usuariosprovider_pkey" type="pk-constr" factor="100" table="public.&quot;Site_usuariosprovider&quot;">
+		<columns names="id_usuario_id" ref-type="src-columns"/>
+	</constraint>
+	<index name="site_usuariosprovider_71cf28f2" table="public.&quot;Site_usuariosprovider&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="id_provider"/>
+		</idxelement>
+	</index>
+	<index name="site_usuariosprovider_703a744d" table="public.&quot;Site_usuariosprovider&quot;"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="fk_provider_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="django_admin_log_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="django_admin_log">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1041" y="813.8"/>
+	<column name="id" not-null="true" default-value="nextval('django_admin_log_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="action_time" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="object_id">
+		<type name="text"/>
+	</column>
+	<column name="object_repr" not-null="true">
+		<type name="character varying" length="200"/>
+	</column>
+	<column name="action_flag" not-null="true">
+		<type name="smallint"/>
+	</column>
+	<column name="change_message" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="content_type_id">
+		<type name="integer"/>
+	</column>
+	<column name="user_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="django_admin_log_action_flag_check" type="ck-constr" table="public.django_admin_log">
+			<expression><![CDATA[(action_flag >= 0)]]></expression>
+	</constraint>
+	<constraint name="django_admin_log_pkey" type="pk-constr" factor="100" table="public.django_admin_log">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="django_admin_log_417f1b1c" table="public.django_admin_log"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="content_type_id"/>
+		</idxelement>
+	</index>
+	<index name="django_admin_log_e8701ad4" table="public.django_admin_log"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="user_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<table name="django_session">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="58.9997" y="159.8"/>
+	<column name="session_key" not-null="true">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="session_data" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="expire_date" not-null="true">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<constraint name="django_session_pkey" type="pk-constr" factor="100" table="public.django_session">
+		<columns names="session_key" ref-type="src-columns"/>
+	</constraint>
+	<index name="django_session_de54fa62" table="public.django_session"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="expire_date"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="djkombu_queue_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="djkombu_queue">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="579" y="883.8"/>
+	<column name="id" not-null="true" default-value="nextval('djkombu_queue_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="200"/>
+	</column>
+	<constraint name="djkombu_queue_pkey" type="pk-constr" factor="100" table="public.djkombu_queue">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<constraint name="djkombu_queue_name_key" type="uq-constr" factor="100" table="public.djkombu_queue">
+		<columns names="name" ref-type="src-columns"/>
+	</constraint>
+	<index name="djkombu_queue_name_like" table="public.djkombu_queue"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="name"/>
+		</idxelement>
+	</index>
+</table>
+
+<sequence name="djkombu_message_id_seq"
+	 start="1" increment="1"
+	 min-value="1" max-value="9223372036854775807"
+	 cache="1" cycle="false">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="djkombu_message">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="50" y="845"/>
+	<column name="id" not-null="true" default-value="nextval('djkombu_message_id_seq'::regclass)">
+		<type name="integer"/>
+	</column>
+	<column name="visible" not-null="true">
+		<type name="boolean"/>
+	</column>
+	<column name="sent_at">
+		<type name="timestamp" with-timezone="true"/>
+	</column>
+	<column name="payload" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="queue_id" not-null="true">
+		<type name="integer"/>
+	</column>
+	<constraint name="djkombu_message_pkey" type="pk-constr" factor="100" table="public.djkombu_message">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+	<index name="djkombu_message_visible" table="public.djkombu_message"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="visible"/>
+		</idxelement>
+	</index>
+	<index name="djkombu_message_sent_at" table="public.djkombu_message"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="sent_at"/>
+		</idxelement>
+	</index>
+	<index name="djkombu_message_queue_id" table="public.djkombu_message"
+		 concurrent="false" unique="false" fast-update="false"
+		 index-type="btree" factor="90">
+		<idxelement use-sorting="false">
+			<column name="queue_id"/>
+		</idxelement>
+	</index>
+</table>
+
+<constraint name="Crawler__fk_sites_id_7f3a781b373f30b4_fk_Crawler_sites_id_sites" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Crawler_sites&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Crawler_linksrss&quot;">
+	<columns names="fk_sites_id" ref-type="src-columns"/>
+	<columns names="id_sites" ref-type="dst-columns"/>
+</constraint>
+<constraint name="Crawler_p_fk_site_id_4e391bc5263cb9e2_fk_Crawler_sites_id_sites" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Crawler_sites&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Crawler_postagens&quot;">
+	<columns names="fk_site_id" ref-type="src-columns"/>
+	<columns names="id_sites" ref-type="dst-columns"/>
+</constraint>
+<constraint name="D92800f7962ab4ec4e91610f96c16f28" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Crawler_categorias&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Crawler_sitescategorias&quot;">
+	<columns names="fk_categoria_id" ref-type="src-columns"/>
+	<columns names="id_categoria" ref-type="dst-columns"/>
+</constraint>
+<constraint name="Crawler_s_fk_site_id_5d208eb84d312cf6_fk_Crawler_sites_id_sites" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Crawler_sites&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Crawler_sitescategorias&quot;">
+	<columns names="fk_site_id" ref-type="src-columns"/>
+	<columns names="id_sites" ref-type="dst-columns"/>
+</constraint>
+<constraint name="D07155407d12ada71ecc074fcebf3c13" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Crawler_postagens&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Crawler_tagspostagens&quot;">
+	<columns names="fk_postagem_id" ref-type="src-columns"/>
+	<columns names="id_postagem" ref-type="dst-columns"/>
+</constraint>
+<constraint name="Crawler_tagsp_fk_tag_id_6fffeeebb926487d_fk_Crawler_tags_id_tag" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Crawler_tags&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Crawler_tagspostagens&quot;">
+	<columns names="fk_tag_id" ref-type="src-columns"/>
+	<columns names="id_tag" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_content_type_id_508cf46651277a81_fk_django_content_type_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.django_content_type"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_permission">
+	<columns names="content_type_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_group_permissio_group_id_689710a9a73b7457_fk_auth_group_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_group"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_group_permissions">
+	<columns names="group_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_group_permission_id_1f49ccbbdc69d2fc_fk_auth_permission_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_permission"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_group_permissions">
+	<columns names="permission_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_user_groups_user_id_4b5ed4ffdb8fd9b0_fk_auth_user_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_user"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_user_groups">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_user_groups_group_id_33ac548dcf5f8e37_fk_auth_group_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_group"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_user_groups">
+	<columns names="group_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_user_user_permiss_user_id_7f0938558328534a_fk_auth_user_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_user"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_user_user_permissions">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="auth_user__permission_id_384b62483d7071f0_fk_auth_permission_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_permission"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.auth_user_user_permissions">
+	<columns names="permission_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="Site_usuariospro_id_usuario_id_55a8ad9d72bbb897_fk_auth_user_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_user"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Site_usuariosprovider&quot;">
+	<columns names="id_usuario_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="S_fk_provider_id_50202c3a474e97d3_fk_Site_providers_id_provider" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.&quot;Site_providers&quot;"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.&quot;Site_usuariosprovider&quot;">
+	<columns names="fk_provider_id" ref-type="src-columns"/>
+	<columns names="id_provider" ref-type="dst-columns"/>
+</constraint>
+<constraint name="djan_content_type_id_697914295151027a_fk_django_content_type_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.django_content_type"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.django_admin_log">
+	<columns names="content_type_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="django_admin_log_user_id_52fdd58701c5f563_fk_auth_user_id" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.auth_user"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.django_admin_log">
+	<columns names="user_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<constraint name="djkombu_message_queue_id_fkey" type="fk-constr" comparison-type="MATCH SIMPLE"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.djkombu_queue"
+	deferrable="true" defer-type="INITIALLY DEFERRED"
+ table="public.djkombu_message">
+	<columns names="queue_id" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+<relationship name="&quot;rel_Crawler_linksrss_Crawler_sites&quot;" type="relfk"
+	 src-table="public.&quot;Crawler_linksrss&quot;"
+	 dst-table="public.&quot;Crawler_sites&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Crawler_postagens_Crawler_sites&quot;" type="relfk"
+	 src-table="public.&quot;Crawler_postagens&quot;"
+	 dst-table="public.&quot;Crawler_sites&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Crawler_sitescategorias_Crawler_categorias&quot;" type="relfk"
+	 src-table="public.&quot;Crawler_sitescategorias&quot;"
+	 dst-table="public.&quot;Crawler_categorias&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Crawler_sitescategorias_Crawler_sites&quot;" type="relfk"
+	 src-table="public.&quot;Crawler_sitescategorias&quot;"
+	 dst-table="public.&quot;Crawler_sites&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Crawler_tagspostagens_Crawler_postagens&quot;" type="relfk"
+	 src-table="public.&quot;Crawler_tagspostagens&quot;"
+	 dst-table="public.&quot;Crawler_postagens&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Crawler_tagspostagens_Crawler_tags&quot;" type="relfk"
+	 src-table="public.&quot;Crawler_tagspostagens&quot;"
+	 dst-table="public.&quot;Crawler_tags&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_permission_django_content_type" type="relfk"
+	 src-table="public.auth_permission"
+	 dst-table="public.django_content_type"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_group_permissions_auth_group" type="relfk"
+	 src-table="public.auth_group_permissions"
+	 dst-table="public.auth_group"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_group_permissions_auth_permission" type="relfk"
+	 src-table="public.auth_group_permissions"
+	 dst-table="public.auth_permission"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_user_groups_auth_user" type="relfk"
+	 src-table="public.auth_user_groups"
+	 dst-table="public.auth_user"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_user_groups_auth_group" type="relfk"
+	 src-table="public.auth_user_groups"
+	 dst-table="public.auth_group"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_user_user_permissions_auth_user" type="relfk"
+	 src-table="public.auth_user_user_permissions"
+	 dst-table="public.auth_user"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_auth_user_user_permissions_auth_permission" type="relfk"
+	 src-table="public.auth_user_user_permissions"
+	 dst-table="public.auth_permission"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Site_usuariosprovider_auth_user&quot;" type="relfk"
+	 src-table="public.&quot;Site_usuariosprovider&quot;"
+	 dst-table="public.auth_user"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="&quot;rel_Site_usuariosprovider_Site_providers&quot;" type="relfk"
+	 src-table="public.&quot;Site_usuariosprovider&quot;"
+	 dst-table="public.&quot;Site_providers&quot;"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_django_admin_log_django_content_type" type="relfk"
+	 src-table="public.django_admin_log"
+	 dst-table="public.django_content_type"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_django_admin_log_auth_user" type="relfk"
+	 src-table="public.django_admin_log"
+	 dst-table="public.auth_user"
+	 src-required="true" dst-required="true"/>
+
+<relationship name="rel_djkombu_message_djkombu_queue" type="relfk"
+	 src-table="public.djkombu_message"
+	 dst-table="public.djkombu_queue"
+	 src-required="true" dst-required="true"/>
+
+</dbmodel>
