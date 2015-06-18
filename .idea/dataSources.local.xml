@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="64df6365-d791-48bf-960c-607a7096553d">
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9cdf9ddf92</user-password>
+      <schema-pattern>newsreader.pg_catalog newsreader.public</schema-pattern>
+      <default-schemas>newsreader.pg_catalog newsreader.public</default-schemas>
+    </data-source>
+    <data-source name="Django default2" uuid="0d7bdd5a-e793-445f-8af7-b8dbe2f5da98">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>newsreader.pg_catalog newsreader.public</schema-pattern>
+      <default-schemas>newsreader.pg_catalog newsreader.public</default-schemas>
+    </data-source>
+  </component>
+</project>

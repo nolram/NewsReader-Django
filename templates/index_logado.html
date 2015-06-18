@@ -1,0 +1,171 @@
+{% extends "modelos/model.html" %}
+{% load staticfiles %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/index_logado.css' %}">
+{% endblock %}
+{% block content %}
+{% include "modelos/barra_navegacao.html" %}
+<div class="container" id="conteudo">
+    <div class="row-fluid">
+        <div class="title">
+            <h1>Últimas Notícias</h1>
+        </div>
+        <div class="timeline">
+				  <dl class="timeline_g">
+					  <!--<dt>Apr 2014</dt>
+					  <dd class="pos-right clearfix">
+						  <div class="circ"></div>
+						  <div class="time">Apr 14</div>
+						  <div class="events">
+							  <div class="pull-left">
+								  <img class="events-object img-rounded" src="img/photo-1.jpg">
+							  </div>
+							  <div class="events-body">
+								  <h4 class="events-heading">Bootstrap</h4>
+								  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+							  </div>
+						  </div>
+					  </dd>
+					  <dd class="pos-left clearfix">
+						  <div class="circ"></div>
+						  <div class="time">Apr 10</div>
+						  <div class="events">
+							  <div class="pull-left">
+								  <img class="events-object img-rounded" src="img/photo-2.jpg">
+							  </div>
+							  <div class="events-body">
+								  <h4 class="events-heading">Bootflat</h4>
+								  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+							  </div>
+						  </div>
+					  </dd>
+					  <dt>Mar 2014</dt>
+					  <dd class="pos-right clearfix">
+						  <div class="circ"></div>
+						  <div class="time">Mar 15</div>
+						  <div class="events">
+							  <div class="pull-left">
+								  <img class="events-object img-rounded" src="img/photo-3.jpg">
+							  </div>
+							  <div class="events-body">
+								  <h4 class="events-heading">Flat UI</h4>
+								  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+							  </div>
+						  </div>
+					  </dd>
+					  <dd class="pos-left clearfix">
+						  <div class="circ"></div>
+						  <div class="time">Mar 8</div>
+						  <div class="events">
+							  <div class="pull-left">
+								  <img class="events-object img-rounded" src="img/photo-4.jpg">
+							  </div>
+							  <div class="events-body">
+								  <h4 class="events-heading">UI design</h4>
+								  <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+							  </div>
+						  </div>
+					  </dd>-->
+				  </dl>
+			  </div>
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+    <script>
+    var contador = 1;
+    var direita = true;
+    var ultimo_dia;
+    var loading = false;
+
+    Date.prototype.setISO8601 = function (string) {
+        var regexp = "([0-9]{4})(-([0-9]{2})(-([0-9]{2})" +
+            "(T([0-9]{2}):([0-9]{2})(:([0-9]{2})(\.([0-9]+))?)?" +
+            "(Z|(([-+])([0-9]{2}):([0-9]{2})))?)?)?)?";
+        var d = string.match(new RegExp(regexp));
+
+        var offset = 0;
+        var date = new Date(d[1], 0, 1);
+
+        if (d[3]) { date.setMonth(d[3] - 1); }
+        if (d[5]) { date.setDate(d[5]); }
+        if (d[7]) { date.setHours(d[7]); }
+        if (d[8]) { date.setMinutes(d[8]); }
+        if (d[10]) { date.setSeconds(d[10]); }
+        if (d[12]) { date.setMilliseconds(Number("0." + d[12]) * 1000); }
+        if (d[14]) {
+            offset = (Number(d[16]) * 60) + Number(d[17]);
+            offset *= ((d[15] == '-') ? 1 : -1);
+        }
+
+        offset -= date.getTimezoneOffset();
+        time = (Number(date) + (offset * 60 * 1000));
+        this.setTime(Number(time));
+    }
+
+
+    function carregar_ultimas_noticias(){
+        var endereco = "/last_news/"+contador+"/";
+        contador++;
+        $.getJSON(endereco, function(data){
+            var postagem = data.object_list;
+            $.each(postagem, function(i, post){
+                var titulo = post.fields.titulo;
+                var texto = post.fields.texto.substring(0, 300);
+                var data = new Date(post.fields.data_adicionado);
+                var mes = data.getMonth() + 1;
+                if(contador == 2 && i == 0){
+                    ultimo_dia = new Date(post.fields.data_adicionado);
+                    $(".timeline_g").append("<dt>"+data.getDate()+"/"+mes+"</dt>");
+                }
+                else if(ultimo_dia.getMonth() != data.getMonth() || ultimo_dia.getDate() != data.getDate()){
+                    ultimo_dia = data;
+                     $(".timeline_g").append("<dt>"+data.getDate()+"/"+mes+"</dt>");
+                }
+
+                if(direita){
+                    direita = false;
+                    $(".timeline_g").append("<dd class='pos-right clearfix'>"+
+						  "<div class='circ'></div>"+
+						  "<div class='time'>"+data.getDate()+"/"+mes+"-"+data.getHours()+":"+data.getMinutes()+"</div>"+
+						  "<div class='events'>"+
+							  "<div class='events-body'>"+
+								  "<h4 class='events-heading'><a href='/postagem/"+post.pk+"/'>"+titulo+"</a></h4>"+
+								  "<p>"+texto+"</p>"+
+							  "</div>"+
+						  "</div>"+
+					  "</dd>");
+                }else{
+                    direita = true;
+                    $(".timeline_g").append("<dd class='pos-left clearfix'>"+
+						  "<div class='circ'></div>"+
+						  "<div class='time'>"+data.getDate()+"/"+mes+"-"+data.getHours()+":"+data.getMinutes()+"</div>"+
+						  "<div class='events'>"+
+							  "<div class='events-body'>"+
+								  "<h4 class='events-heading'><a href='/postagem/"+post.pk+"/'>"+titulo+"</a></h4>"+
+								  "<p>"+texto+"</p>"+
+							  "</div>"+
+						  "</div>"+
+					  "</dd>");
+                }
+            });
+            loading = false;
+        });
+    }
+        $(function() {
+            carregar_ultimas_noticias();
+            loading = false;
+            $(window).scroll(function(){
+                var curScroll = $(this).scrollTop();
+                //alert(curScroll);
+                var maxScroll = $(document).height() - $(window).height() - $(window).scrollTop();
+                //alert(maxScroll);
+                if((maxScroll == 0) && !loading){
+                    loading = true;
+                    $(this)[0].scrollTop = $(this).scrollHeight - $(this).height();
+                    carregar_ultimas_noticias();
+                }
+            });
+        });
+    </script>
+{% endblock %}

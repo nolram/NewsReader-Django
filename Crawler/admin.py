@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Tags, Sites, Postagens, LinksRSS, Categorias, TagsPostagens, SitesCategorias
+from .models import Tags, Sites, Postagens, LinksRSS, Categorias, TagsPostagens, SitesCategorias
 
 admin.site.register(Tags)
 admin.site.register(Sites)

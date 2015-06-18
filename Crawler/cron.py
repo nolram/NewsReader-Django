@@ -2,8 +2,7 @@
 __author__ = 'marlon'
 
 import feedparser as fp
-from models import Categorias, LinksRSS, Postagens, Sites, Tags, TagsPostagens
-from django_cron import CronJobBase, Schedule
+from .models import Categorias, LinksRSS, Postagens, Sites, Tags, TagsPostagens
 
 
 #class CronColeta(CronJobBase):
@@ -27,4 +26,4 @@ def do_crawler(self):
                 tpos = TagsPostagens(fk_tag=db_tag, fk_postagem=post)
                 tpos.save()
 
-        print "Salvo reportagem"
+        print("Salvo reportagem")

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class UsuariosProvider(models.Model):
-    id_usuario = models.ForeignKey(User, primary_key=True)
+    id_usuario = models.ForeignKey(User, primary_key=True, unique=True)
     fk_provider = models.ForeignKey("Providers", related_name="fk_provider")
     id_provider = models.TextField(db_index=True)
     data_registro = models.DateTimeField(auto_now_add=True)

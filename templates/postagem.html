@@ -1,0 +1,17 @@
+{% extends "modelos/model.html" %}
+{% load staticfiles %}
+{% block content %}
+{% include "modelos/barra_navegacao.html" %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="title">
+                <h1>{{ titulo }}</h1>
+            </div>
+            <hr>
+            <p>{{ data_adicionado }}</p>
+            <p>{{ texto }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

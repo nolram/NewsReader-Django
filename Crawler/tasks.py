@@ -35,25 +35,43 @@ def do_crawler():
     try:
         sites = LinksRSS.objects.all()
         for site in sites:
-            coleta = fp.parse(site.link_rss)
-            for col in coleta["items"]:
-                post, check = Postagens.objects.get_or_create(link=col["wfw_commentrss"].replace("feed/", ""),
-                                                                defaults={"titulo": col["title"],
-                                                                 "texto": col["summary"],
-                                                                 "fk_site": site.fk_sites})
-                if not check:
-                    for tag in col["tags"]:
-                        try:
-                            db_tag = Tags.objects.get(tag=tag["term"].lower())
-                            db_tag.contador += 1
-                            db_tag.save()
-                        except ObjectDoesNotExist:
-                            db_tag = Tags(tag=tag["term"].lower())
-                            db_tag.save()
-                        tpos = TagsPostagens(fk_tag=db_tag, fk_postagem=post)
-                        tpos.save()
+            try:
+                coleta = fp.parse(site.link_rss)
+                if coleta.bozo == 0:
+                    for col in coleta["items"]:
+                        if "wfw_commentrss" in col:
+                            post, check = Postagens.objects.get_or_create(link=col["wfw_commentrss"].replace("feed/", ""),
+                                                                            defaults={"titulo": col["title"],
+                                                                             "texto": col["summary"],
+                                                                             "fk_site": site.fk_sites})
+                        elif "feedburner_origlink" in col and isinstance(col["feedburner_origlink"], str):
+                            post, check = Postagens.objects.get_or_create(link=col["feedburner_origlink"],
+                                                                            defaults={"titulo": col["title"],
+                                                                             "texto": col["summary"],
+                                                                             "fk_site": site.fk_sites})
+                        else:
+                            post, check = Postagens.objects.get_or_create(link=col["link"],
+                                                                            defaults={"titulo": col["title"],
+                                                                             "texto": col["summary"],
+                                                                             "fk_site": site.fk_sites})
+                        if not check:
+                            if "tags" in col:
+                                for tag in col["tags"]:
+                                    try:
+                                        db_tag = Tags.objects.get(tag=tag["term"].lower())
+                                        db_tag.contador += 1
+                                        db_tag.save()
+                                    except ObjectDoesNotExist:
+                                        db_tag = Tags(tag=tag["term"].lower())
+                                        db_tag.save()
+                                    tpos = TagsPostagens(fk_tag=db_tag, fk_postagem=post)
+                                    tpos.save()
+                else:
+                    logger.info("Erro do BOZO hehehe")
+            except Exception:
+                logger.info("Erro na coleta da página: {0}".format(site.link_rss))
 
     except Exception as exce:
-        raise retry(exc=exce)
+        logger.info("Erro: ")
 
     logger.info("Coleta Concluida")

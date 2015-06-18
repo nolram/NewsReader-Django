@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+    <meta charset="UTF-8">
+    <title>{% block title %} Flyn News Reader {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootflat.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/universal.css' %}">
+{% block style %}
+{% endblock %}
+</head>
+<body id="{% block body-id %} body {% endblock %}">
+
+{% block content %} {% endblock %}
+<script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/icheck.min.js' %}"></script>
+<script src="{% static 'js/jquery.fs.selecter.min.js' %}"></script>
+<script src="{% static 'js/jquery.fs.stepper.min.js' %}"></script>
+{% block script %}
+{% endblock %}
+</body>
+</html>

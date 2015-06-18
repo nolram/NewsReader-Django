@@ -67,7 +67,7 @@ INSTALLED_APPS = (
 CELERYBEAT_SCHEDULE = {
     'add-every-30-minutes': {
         'task': 'tasks.do_crawler',
-        'schedule': timedelta(minutes=30),
+        'schedule': timedelta(minutes=25),
     },
 }
 
@@ -131,12 +131,35 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
+STATIC_ROOT=os.path.join(BASE_DIR, 'static_root')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
 )
 
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
-    'django.core.context_processors.request',
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR,  'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.template.context_processors.request',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+LOGIN_URL = '/login/'
+
 BOOTSTRAP_ADMIN_SIDEBAR_MENU = True

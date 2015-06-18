@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1903417602">
+    <data-source source="LOCAL" name="Django default" uuid="64df6365-d791-48bf-960c-607a7096553d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:newsreader</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Django default2" uuid="0d7bdd5a-e793-445f-8af7-b8dbe2f5da98">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:newsreader</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
