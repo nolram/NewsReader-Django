@@ -12,6 +12,7 @@ from celery.utils.log import get_task_logger
 from Crawler.models import Categorias, LinksRSS, Postagens, Sites, Tags, TagsPostagens
 from django.core.exceptions import ObjectDoesNotExist
 
+from lxml.html.clean import clean_html, Cleaner
 
 logger = get_task_logger(__name__)
 
@@ -54,6 +55,7 @@ def do_crawler():
                                                                             defaults={"titulo": col["title"],
                                                                              "texto": col["summary"],
                                                                              "fk_site": site.fk_sites})
+                            teste = Cleaner()
                         if not check:
                             if "tags" in col:
                                 for tag in col["tags"]:
@@ -67,7 +69,7 @@ def do_crawler():
                                     tpos = TagsPostagens(fk_tag=db_tag, fk_postagem=post)
                                     tpos.save()
                 else:
-                    logger.info("Erro do BOZO hehehe")
+                    logger.info("Problema de conectividade: BOZO ERROR")
             except Exception:
                 logger.info("Erro na coleta da página: {0}".format(site.link_rss))
 
