@@ -46,6 +46,8 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
+USING_SQLITE = True
+
 ALLOWED_HOSTS = []
 
 
@@ -102,7 +104,17 @@ WSGI_APPLICATION = 'NewsReaderDjango.wsgi.application'
 #
 # }
 
-DATABASES = {
+if USING_SQLITE:
+    DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                'USER': '',
+                'PASSWORD': '',
+            }
+    }
+else:
+    DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.postgresql_psycopg2', #'django.db.backends.sqlite3',
                 'NAME': 'newsreader', #os.path.join(BASE_DIR, 'db.sqlite3'),
