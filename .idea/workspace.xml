@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Crawler/tasks.py" line="75" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="" />
     <ignored path="NewsReaderDjango.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
