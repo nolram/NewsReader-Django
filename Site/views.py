@@ -37,8 +37,12 @@ def pag_login(request):
 
 @login_required
 def pag_postagem(request, id_postagem):
-    postagem = Postagens.objects.get(id_postagem=id_postagem)
-    dic_pos = {"postagem": postagem}
+    try:
+        postagem = Postagens.objects.get(id_postagem=id_postagem)
+    except Postagens.DoesNotExist:
+        raise Http404("Nenhuma postagem encontrada com esse ID.")
+
+    dic_pos = {"postagem": postagem, "usuario": request.user}
     return render(request, "postagem.html", dic_pos)
 
 def logout_view(request):
