@@ -5,12 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/configuracoes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/index_logado.css" afterPath="$PROJECT_DIR$/static/css/index_logado.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/postagem.html" afterPath="$PROJECT_DIR$/templates/postagem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logo-gizmodo.png" afterPath="$PROJECT_DIR$/logo-gizmodo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_7jvNoQs.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_7jvNoQs.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_Gs9CgJE.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_Gs9CgJE.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_LqgQLU1.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_LqgQLU1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_eRwub47.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_eRwub47.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/meiobit.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/meiobit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/meiobit_a9xSExt.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/meiobit_a9xSExt.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/tecnoblog.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/tecnoblog.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/tecnoblog_KlS9Ga5.png" afterPath="$PROJECT_DIR$/NewsReaderDjango/media/tecnoblog_KlS9Ga5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.directory" afterPath="$PROJECT_DIR$/.directory" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Crawler/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/Site/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/migrations/0002_auto_20150309_0053.py" afterPath="$PROJECT_DIR$/Crawler/migrations/0002_auto_20150309_0053.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NewsReaderDjango.iml" afterPath="$PROJECT_DIR$/.idea/NewsReaderDjango.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/__init__.py" afterPath="$PROJECT_DIR$/Crawler/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/migrations/__init__.py" afterPath="$PROJECT_DIR$/Crawler/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/__init__.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/__init__.py" afterPath="$PROJECT_DIR$/Site/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/migrations/__init__.py" afterPath="$PROJECT_DIR$/Site/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/admin.py" afterPath="$PROJECT_DIR$/Crawler/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/admin.py" afterPath="$PROJECT_DIR$/Site/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/celery.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/celery.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/cron.py" afterPath="$PROJECT_DIR$/Crawler/cron.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/erl_crash.dump" afterPath="$PROJECT_DIR$/erl_crash.dump" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modelo_banco.dbm" afterPath="$PROJECT_DIR$/modelo_banco.dbm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/models.py" afterPath="$PROJECT_DIR$/Crawler/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/models.py" afterPath="$PROJECT_DIR$/Site/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/settings.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/tasks.py" afterPath="$PROJECT_DIR$/Crawler/tasks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/tests.py" afterPath="$PROJECT_DIR$/Crawler/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/tests.py" afterPath="$PROJECT_DIR$/Site/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/threading.py" afterPath="$PROJECT_DIR$/Crawler/threading.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/urls.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/views.py" afterPath="$PROJECT_DIR$/Crawler/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/views.py" afterPath="$PROJECT_DIR$/Site/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/wsgi.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/wsgi.py" />
     </list>
     <ignored path="NewsReaderDjango.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +85,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="configuracoes.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="configuracoes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/configuracoes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2542373">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasks.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19543974">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -48,7 +121,7 @@
       <file leaf-file-name="clean.py" pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib64/python3.4/site-packages/lxml/html/clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6785715">
+            <state vertical-scroll-proportion="0.0">
               <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
               <folding />
             </state>
@@ -94,6 +167,7 @@
         <option value="$PROJECT_DIR$/templates/postagem.html" />
         <option value="$PROJECT_DIR$/templates/configuracoes.html" />
         <option value="$PROJECT_DIR$/Crawler/tasks.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -148,8 +222,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -184,6 +256,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,7 +267,7 @@
     <property name="options.lastSelected" value="Errors" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Virtualenv/py3_django/bin/python3" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="dynamic.classpath" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -504,13 +578,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Crawler/cron.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -757,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4347826">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4076087">
           <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.234375">
           <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,9 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding>
-            <element signature="e#25#61#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08152174">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2542373">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9039088">
           <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,30 +909,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/lib64/python3.4/site-packages/lxml/html/clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6785715">
+        <state vertical-scroll-proportion="0.0">
           <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75570035">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/configuracoes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542373">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19543974">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
         </state>
       </provider>
