@@ -9,6 +9,8 @@ class Sites(models.Model):
     link = models.URLField(db_index=True)
     logo = models.ImageField(null=True)
 
+    idioma = models.CharField(max_length=30)
+
     data_adicionado = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
 
