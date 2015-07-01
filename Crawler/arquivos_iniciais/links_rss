@@ -1,4 +1,77 @@
-tecmundo,http://www.baixaki.com.br/rss/tecnologia.xml;
-uol,http://tecnologia.uol.com.br/ultnot/index.xml;
-olhardigital,http://olhardigital.uol.com.br/rss;
-ieee spectrum,http://feeds.feedburner.com/IeeeSpectrum;
+tecmundo,http://www.baixaki.com.br/rss/tecnologia.xml
+uol,http://tecnologia.uol.com.br/ultnot/index.xml
+olhardigital,http://olhardigital.uol.com.br/rss
+ieee spectrum,http://feeds.feedburner.com/IeeeSpectrum
+zero hora,http://zh.clicrbs.com.br/rs/ultimas-noticias-rss/
+zero hora,http://zh.clicrbs.com.br/rs/esportes/ultimas-noticias-rss/
+zero hora,http://zh.clicrbs.com.br/rs/noticias/economia/ultimas-noticias-rss/
+uol,http://rss.uol.com.br/feed/noticias.xml
+folha de são paulo,http://feeds.folha.uol.com.br/emcimadahora/rss091.xml
+ig,http://ig.ultimosegundo.feedsportal.com/c/33511/f/637143/index.rss
+r7,http://noticias.r7.com/brasil/feed.xml
+yahoo! notícias,https://br.noticias.yahoo.com/rss/brasil
+g1,http://g1.globo.com/dynamo/rss2.xml
+g1,http://g1.globo.com/dynamo/brasil/rss2.xml
+g1,http://g1.globo.com/dynamo/ciencia-e-saude/rss2.xml
+g1,http://g1.globo.com/dynamo/concursos-e-emprego/rss2.xml
+g1,http://g1.globo.com/dynamo/economia/rss2.xml
+g1,http://g1.globo.com/dynamo/educacao/rss2.xml
+g1,http://g1.globo.com/dynamo/loterias/rss2.xml
+g1,http://g1.globo.com/dynamo/mundo/rss2.xml
+g1,http://g1.globo.com/dynamo/musica/rss2.xml
+g1,http://g1.globo.com/dynamo/tecnologia/rss2.xml
+new york times,http://rss.nytimes.com/services/xml/rss/nyt/InternationalHome.xml
+bbc uk,http://feeds.bbci.co.uk/news/rss.xml
+globo esporte,http://globoesporte.globo.com/servico/semantica/editorias/plantao/feed.rss
+imasters,http://imasters.com.br/feed/
+gizmodo br,http://feeds.feedburner.com/gizmodobr
+lancenet,http://www.lancenet.com.br/rss/latest/
+techtudo,http://feeds.feedburner.com/techtudo
+omelete,http://omelete.com.br.feedsportal.com/cinema
+omelete,http://omelete.com.br.feedsportal.com/quadrinhos
+omelete,http://omelete.com.br.feedsportal.com/series-e-tv
+omelete,http://omelete.com.br.feedsportal.com/games
+omelete,http://omelete.com.br.feedsportal.com/rss
+uol,http://esporte.uol.com.br/ultimas/index.xml
+uol,http://rss.noticias.uol.com.br/economia/ultnot/index.xml
+wired,http://feeds.wired.com/wired/index
+wired,http://www.wired.com/category/business/feed/
+wired,http://www.wired.com/category/design/feed/
+wired,http://www.wired.com/category/underwire/feed/
+wired,http://www.wired.com/category/gear/feed/
+wired,http://www.wired.com/category/reviews/feed/
+wired,http://www.wired.com/category/science/feed/
+wired,http://www.wired.com/category/science/science-blogs/feed/
+wired,http://www.wired.com/category/threatlevel/feed/
+wired,http://feeds.cnevids.com/brand/wired.mrss
+wired,http://www.wired.com/category/photo/feed/
+the verge,http://www.theverge.com/rss/index.xml
+the verge,http://www.theverge.com/tech/rss/index.xml
+the verge,http://www.theverge.com/apple/rss/index.xml
+the verge,http://www.theverge.com/google/rss/index.xml
+the verge,http://www.theverge.com/microsoft/rss/index.xml
+reuters,http://feeds.reuters.com/news/artsculture
+reuters,http://feeds.reuters.com/reuters/businessNews
+reuters,http://feeds.reuters.com/reuters/entertainment
+reuters,http://feeds.reuters.com/news/wealth
+reuters,http://feeds.reuters.com/reuters/scienceNews
+reuters,http://feeds.reuters.com/reuters/technologyNews
+reuters,http://feeds.reuters.com/reuters/topNews
+reuters,http://feeds.reuters.com/Reuters/worldNews
+exame,http://feeds.feedburner.com/EXAME-Noticias
+exame,http://feeds.feedburner.com/EXAME-Mercados
+exame,http://feeds.feedburner.com/Exame-Negocios
+exame,http://feeds.feedburner.com/Exame-Economia
+exame,http://feeds.feedburner.com/EXAME-Marketing
+exame,http://feeds.feedburner.com/Exame-Tecnologia
+exame,http://feeds.feedburner.com/EXAME-Marketing
+exame,http://feeds.feedburner.com/Exame-Gestao
+exame,http://feeds.feedburner.com/Exame-GaleriaCiencia
+galileu,http://revistagalileu.globo.com/rss/ultimas/feed.xml
+bbc brasil,http://www.bbc.com/portuguese/index.xml
+bbc brasil,http://www.bbc.com/portuguese/topicos/brasil/index.xml
+bbc brasil,http://www.bbc.com/portuguese/topicos/internacional/index.xml
+bbc brasil,http://www.bbc.com/portuguese/topicos/economia/index.xml
+bbc brasil,http://www.bbc.com/portuguese/topicos/saude/index.xml
+bbc brasil,http://www.bbc.com/portuguese/topicos/ciencia_e_tecnologia/index.xml
+bbc brasil,http://www.bbc.com/portuguese/topicos/cultura/index.xml

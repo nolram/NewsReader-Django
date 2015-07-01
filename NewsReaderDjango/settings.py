@@ -118,8 +118,8 @@ else:
             'default': {
                 'ENGINE': 'django.db.backends.postgresql_psycopg2',
                 'NAME': 'newsreader',
-                'USER': 'postgres',
-                'PASSWORD': '12345678',
+                'USER': 'flynadmin', #'postgres',
+                'PASSWORD': 'flYnReadER2015', #'12345678',
             }
     }
 

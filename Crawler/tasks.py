@@ -16,19 +16,6 @@ from lxml.html.clean import clean_html, Cleaner
 
 logger = get_task_logger(__name__)
 
-@shared_task
-def add(x, y):
-    return x + y
-
-
-@shared_task
-def mul(x, y):
-    return x * y
-
-
-@shared_task
-def xsum(numbers):
-    return sum(numbers)
 
 @task(name='tasks.do_crawler')
 def do_crawler():
@@ -38,8 +25,8 @@ def do_crawler():
         for site in sites:
             try:
                 coleta = fp.parse(site.link_rss)
-                if coleta.bozo == 0:
-                    for col in coleta["items"]:
+                if len(coleta.entries) > 0:
+                    for col in coleta.entries:
                         if "wfw_commentrss" in col:
                             post, check = Postagens.objects.get_or_create(link=col["wfw_commentrss"].replace("feed/", ""),
                                                                             defaults={"titulo": col["title"],
@@ -69,7 +56,7 @@ def do_crawler():
                                     tpos = TagsPostagens(fk_tag=db_tag, fk_postagem=post)
                                     tpos.save()
                 else:
-                    logger.info("Problema de conectividade: BOZO ERROR")
+                    logger.info("A consulta não retornou resultados")
             except Exception:
                 logger.info("Erro na coleta da página: {0}".format(site.link_rss))
 

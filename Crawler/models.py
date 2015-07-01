@@ -6,7 +6,7 @@ class Sites(models.Model):
 
     titulo = models.CharField(max_length=150, db_index=True)
     descricao = models.TextField()
-    link = models.URLField(db_index=True)
+    link = models.URLField(db_index=True, max_length=600)
     logo = models.ImageField(null=True)
 
     idioma = models.CharField(max_length=30)
@@ -34,7 +34,7 @@ class LinksRSS(models.Model):
     id_links_rss = models.AutoField(primary_key=True)
     fk_sites = models.ForeignKey("Sites")
 
-    link_rss = models.URLField(db_index=True)
+    link_rss = models.URLField(db_index=True, max_length=600)
 
     data_adicionado = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
@@ -60,7 +60,7 @@ class Postagens(models.Model):
     fk_site = models.ForeignKey("Sites")
 
     titulo = models.CharField(max_length=500)
-    link = models.URLField(db_index=True)
+    link = models.URLField(db_index=True, max_length=600)
     texto = models.TextField(null=True)
 
     img_thumbnail_min = models.ImageField(null=True, height_field=50, width_field=50)
