@@ -7,13 +7,13 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Crawler', '0002_auto_20150309_0053'),
+        ('Crawler', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='sites',
-            name='logo',
-            field=models.ImageField(upload_to='', null=True),
+            model_name='postagens',
+            name='fk_imagem',
+            field=models.ForeignKey(null=True, to='Crawler.Imagens', related_name='img_postagem'),
         ),
     ]

@@ -781,3 +781,111 @@ Página http://www.bbc.co.uk/portuguese/topicos/cultura/ retornou um erro
 >>> len(erros)
 5
 >>> 
+movidos = []
+>>> erros = []
+>>> propriedades = {}
+>>> for i in all_links:
+	tmp_parse = fp.parse(i.link_rss)
+	if tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+		propriedades[i.link_rss] = tmp_parse.entries[0].keys()
+		print("Acessado com sucesso: {}".format(i.link_rss))
+	elif tmp_parse.status == 301 and len(tmp_parse.entries) > 0:
+		propriedades[tmp_parse.href] = tmp_parse.entries[0].keys()
+		print("Link: {} - Movido para: {}".format(i.link_rss, tmp_parse.href))
+		movidos.append(tmp_parse.href)
+	else:
+		print("Página {} retornou um erro".format(i.link_rss))
+		erros.append(i.link_rss)
+
+		
+Traceback (most recent call last):
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 399, in __getattr__
+    return self.__getitem__(key)
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 357, in __getitem__
+    return dict.__getitem__(self, key)
+KeyError: 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#91>", line 3, in <module>
+    if tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 401, in __getattr__
+    raise AttributeError("object has no attribute '%s'" % key)
+AttributeError: object has no attribute 'status'
+
+>>> movidos = []
+>>> erros = []
+>>> propriedades = {}
+>>> for i in all_links:
+	tmp_parse = fp.parse(i.link_rss)
+	if tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+		propriedades[i.link_rss] = tmp_parse.entries[0].keys()
+		print("Acessado com sucesso: {}".format(i.link_rss))
+	elif tmp_parse.status == 301 and len(tmp_parse.entries) > 0:
+		propriedades[tmp_parse.href] = tmp_parse.entries[0].keys()
+		print("Link: {} - Movido para: {}".format(i.link_rss, tmp_parse.href))
+		movidos.append(tmp_parse.href)
+	else:
+		print("Página {} retornou um erro".format(i.link_rss))
+		erros.append(i.link_rss)
+
+		
+Traceback (most recent call last):
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 399, in __getattr__
+    return self.__getitem__(key)
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 357, in __getitem__
+    return dict.__getitem__(self, key)
+KeyError: 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#96>", line 3, in <module>
+    if tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 401, in __getattr__
+    raise AttributeError("object has no attribute '%s'" % key)
+AttributeError: object has no attribute 'status'
+>>> tmp_parse
+{'entries': [], 'bozo': 1, 'bozo_exception': URLError(gaierror(-5, 'No address associated with hostname'),), 'feed': {}}
+>>> for i in all_links:
+	tmp_parse = fp.parse(i.link_rss)
+	if tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+		propriedades[i.link_rss] = tmp_parse.entries[0].keys()
+		print("Acessado com sucesso: {}".format(i.link_rss))
+	elif tmp_parse.status == 301 and len(tmp_parse.entries) > 0:
+		propriedades[tmp_parse.href] = tmp_parse.entries[0].keys()
+		print("Link: {} - Movido para: {}".format(i.link_rss, tmp_parse.href))
+		movidos.append(tmp_parse.href)
+	else:
+		print("Página {} retornou um erro".format(i.link_rss))
+		erros.append(i.link_rss)
+
+		
+Traceback (most recent call last):
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 399, in __getattr__
+    return self.__getitem__(key)
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 357, in __getitem__
+    return dict.__getitem__(self, key)
+KeyError: 'status'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<pyshell#99>", line 3, in <module>
+    if tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+  File "/home/nolram/Virtualenv/py3_django/lib/python3.4/site-packages/feedparser.py", line 401, in __getattr__
+    raise AttributeError("object has no attribute '%s'" % key)
+AttributeError: object has no attribute 'status'
+>>> for i in all_links:
+	tmp_parse = fp.parse(i.link_rss)
+	if tmp_parse.bozo == 1 and tmp_parse.status == 200 and len(tmp_parse.entries) > 0:
+		propriedades[i.link_rss] = tmp_parse.entries[0].keys()
+		print("Acessado com sucesso: {}".format(i.link_rss))
+	elif tmp_parse.status == 301 and len(tmp_parse.entries) > 0:
+		propriedades[tmp_parse.href] = tmp_parse.entries[0].keys()
+		print("Link: {} - Movido para: {}".format(i.link_rss, tmp_parse.href))
+		movidos.append(tmp_parse.href)
+	else:
+		print("Página {} retornou um erro".format(i.link_rss))
+		erros.append(i.link_rss)

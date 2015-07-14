@@ -1,3 +1,6 @@
+"""
+http://code.activestate.com/recipes/84317-easy-threading-with-futures/
+"""
 from threading import *
 import copy
 

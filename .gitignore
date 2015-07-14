@@ -56,3 +56,7 @@ docs/_build/
 target/
 
 .idea/
+
+NewsReaderDjango/media/
+
+db.sqlite3

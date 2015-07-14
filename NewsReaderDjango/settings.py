@@ -64,6 +64,7 @@ INSTALLED_APPS = (
     'kombu.transport.django',
     'Site',
     'Crawler',
+    'sorl.thumbnail',
 )
 
 CELERYBEAT_SCHEDULE = {

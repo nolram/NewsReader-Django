@@ -1,5 +1,5 @@
 from django.db import models
-
+from sorl.thumbnail import ImageField
 
 class Sites(models.Model):
     id_sites = models.AutoField(primary_key=True)
@@ -7,7 +7,8 @@ class Sites(models.Model):
     titulo = models.CharField(max_length=150, db_index=True)
     descricao = models.TextField()
     link = models.URLField(db_index=True, max_length=600)
-    logo = models.ImageField(null=True)
+
+    fk_logo = models.ForeignKey("Imagens", null=True)
 
     idioma = models.CharField(max_length=30)
 
@@ -61,10 +62,10 @@ class Postagens(models.Model):
 
     titulo = models.CharField(max_length=500)
     link = models.URLField(db_index=True, max_length=600)
+    link_origi = models.URLField(db_index=True, max_length=700, null=True)
     texto = models.TextField(null=True)
 
-    img_thumbnail_min = models.ImageField(null=True, height_field=50, width_field=50)
-    img_cover = models.ImageField(null=True)
+    fk_imagem = models.ForeignKey("Imagens", related_name="img_postagem", null=True)
 
     data_adicionado = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
@@ -73,6 +74,17 @@ class Postagens(models.Model):
 
     def __str__(self):
         return "{0} - {1}".format(self.fk_site.titulo, self.titulo)
+
+
+class Imagens(models.Model):
+    id_imagem = models.AutoField(primary_key=True)
+    img_cover = ImageField(null=True)
+    data_inserido = models.DateTimeField(auto_now_add=True)
+    data_modificado = models.DateTimeField(auto_now=True)
+    img_link_orig = models.URLField(max_length=700)
+
+    def __str__(self):
+        return "{0}".format(self.img_link_orig)
 
 
 class TagsPostagens(models.Model):
