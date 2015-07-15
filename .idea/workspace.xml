@@ -5,25 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawler/management/commands/first_add.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawler/scraper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Scripts/teste_tasks_coleta.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0002_auto_20150309_0053.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0003_auto_20150608_1944.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0004_auto_20150616_1913.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0005_sites_idioma.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0006_auto_20150701_1717.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/em_comum.py" afterPath="$PROJECT_DIR$/Scripts/em_comum.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.directory" afterPath="$PROJECT_DIR$/.directory" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/admin.py" afterPath="$PROJECT_DIR$/Crawler/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" afterPath="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/models.py" afterPath="$PROJECT_DIR$/Crawler/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/settings.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/tasks.py" afterPath="$PROJECT_DIR$/Crawler/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/threading.py" afterPath="$PROJECT_DIR$/Crawler/threading.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawler/rssmodel.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/The_Verge_logo.svg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/bbc-blocks-dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/headerLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_7jvNoQs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_Gs9CgJE.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_LqgQLU1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_d5NjS9T.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-gizmodo_eRwub47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo-masthead.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo_cnn_badge_2up.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/logo_olhar_digital.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/masthead-logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/meiobit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/meiobit_a9xSExt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/techbits-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/techbits-logo_7nfaX4P.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/tecnoblog.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/tecnoblog_KlS9Ga5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/tit_header_rss.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/NewsReaderDjango/media/wired-logo.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/teste_tasks_coleta.py" afterPath="$PROJECT_DIR$/Scripts/teste_tasks_coleta.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NewsReaderDjango.iws" />
@@ -75,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="42" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -84,8 +88,20 @@
       <file leaf-file-name="teste_tasks_coleta.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Scripts/teste_tasks_coleta.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58957654">
-              <caret line="87" column="97" selection-start-line="87" selection-start-column="97" selection-end-line="87" selection-end-column="97" />
+            <state vertical-scroll-proportion="0.51706487">
+              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+              <folding>
+                <element signature="e#23#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rssmodel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -97,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/Crawler/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+              <caret line="67" column="13" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="13" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -166,6 +182,8 @@
         <option value="$PROJECT_DIR$/Crawler/admin.py" />
         <option value="$PROJECT_DIR$/Crawler/models.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Crawler/RSSModel.py" />
+        <option value="$PROJECT_DIR$/Crawler/rssmodel.py" />
         <option value="$PROJECT_DIR$/Scripts/teste_tasks_coleta.py" />
       </list>
     </option>
@@ -221,7 +239,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -241,8 +258,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewsReaderDjango" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewsReaderDjango" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,7 +566,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="0" width="1374" height="742" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26207906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -576,13 +608,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -796,13 +821,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_sites">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.071428">
           <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/tests.py">
@@ -813,13 +838,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/management/commands/first_add.py">
@@ -840,7 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.40716612">
           <caret line="1" column="70" selection-start-line="1" selection-start-column="70" selection-end-line="1" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,30 +883,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="47" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/add_some_sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/em_comum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26384366">
           <caret line="240" column="27" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,15 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35504887">
           <caret line="429" column="49" selection-start-line="429" selection-start-column="49" selection-end-line="429" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/res_analise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7654723">
-          <caret line="387" column="40" selection-start-line="387" selection-start-column="40" selection-end-line="387" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,29 +924,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8469388">
           <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,16 +935,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="42" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scripts/res_analise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.4044368">
+          <caret line="363" column="4" selection-start-line="363" selection-start-column="4" selection-end-line="363" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/add_some_sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
           <folding>
-            <element signature="e#22#31#0" expanded="true" />
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/teste_tasks_coleta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58957654">
-          <caret line="87" column="97" selection-start-line="87" selection-start-column="97" selection-end-line="87" selection-end-column="97" />
+        <state vertical-scroll-proportion="0.51706487">
+          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
           </folding>

@@ -8,88 +8,43 @@ from django.core.files.temp import NamedTemporaryFile
 from django.core.files import File
 from lxml.html.clean import Cleaner
 
+from requests.exceptions import ConnectionError
+
+from Crawler.rssmodel import RSSModel
+
 def do_crawler():
+    import django
+    django.setup()
     print("Coletando postagens")
     sites = LinksRSS.objects.all()
-    cleaner = Cleaner(allow_tags=[''], remove_unknown_tags=False)
     for site in sites:
         coleta = fp.parse(site.link_rss)
         print(site.link_rss)
         if "entries" in coleta:
-            for col in coleta.entries:
-                try:
-                    post = Postagens.objects.get(link_origi=col.link)
-                except Postagens.DoesNotExist:
-                    s = requests.get(col.link)
-                    if s.status_code == 200 or s.status_code == 301:
-                        link = s.url
+            for col in range(0, len(coleta.entries)):
+                if col <= 50:
+                    try:
+                        post = Postagens.objects.get(link_origi=coleta.entries[col].link)
+                    except Postagens.DoesNotExist:
                         try:
-                            texto = cleaner.clean_html(col["summary"])
-                        except Exception:
-                            texto = col["summary"]
-                        valores = {
-                            "titulo": col["title"],
-                            "texto": texto,
-                            "fk_site": site.fk_sites,
-                            "link_origi": col.link
-                        }
-                        image_content = NamedTemporaryFile(delete=True)
-                        if "img" in col:
-                            if "src" in col.img:
-                                image_content.write(requests.get(col.img["src"]).content)
-                                image_content.flush()
-                                imga = Imagens(img_cover=File(image_content), img_link_orig=col.img["src"])
-                                imga.save()
-                                valores["fk_imagem"] = imga
-                            elif "url" in col.img:
-                                image_content.write(requests.get(col.img["url"]).content)
-                                image_content.flush()
-                                imga = Imagens(img_cover=File(image_content), img_link_orig=col.img["url"])
-                                imga.save()
-                                valores["fk_imagem"] = imga
-                            elif "href" in col.img:
-                                image_content.write(requests.get(col.img["href"]).content)
-                                image_content.flush()
-                                imga = Imagens(img_cover=File(image_content), img_link_orig=col.img["href"])
-                                imga.save()
-                                valores["fk_imagem"] = imga
-                            elif "link" in col.img:
-                                image_content.write(requests.get(col.img["link"]).content)
-                                image_content.flush()
-                                imga = Imagens(img_cover=File(image_content), img_link_orig=col.img["link"])
-                                imga.save()
-                                valores["fk_imagem"] = imga
-                        elif "media_thumbnail" in col:
-                            image_content.write(requests.get(col.media_thumbnail[0]["url"]).content)
-                            image_content.flush()
-                            imga = Imagens(img_cover=File(image_content),
-                                           img_link_orig=col.media_thumbnail[0]["url"])
-                            imga.save()
-                            valores["fk_imagem"] = imga
-                        elif "links" in col:
-                            for li in col.links:
-                                if "type" in li:
-                                    if li.type.find("image") != -1:
-                                        image_content.write(requests.get(li.href).content)
-                                        image_content.flush()
-                                        imga = Imagens(img_cover=File(image_content), img_link_orig=li.href)
-                                        imga.save()
-                                        valores["fk_imagem"] = imga
+                            s = requests.get(coleta.entries[col].link)
+                        except ConnectionError:
+                            break
+                        if s.status_code == 200 or s.status_code == 301:
+                            rss_model = RSSModel(coleta.entries[col], s.url, coleta.entries[col].link, site.fk_sites)
+                            post = Postagens(titulo=rss_model.link,
+                                             link_origi=rss_model.link_real,
+                                             texto=rss_model.texto,
+                                             fk_site=rss_model.fk_site,
+                                             fk_imagem=rss_model.imagem_banco)
+                            post.save()
 
-                        post, existe = Postagens.objects.get_or_create(link=link, defaults=valores)
-
-                        if not existe and "tags" in col:
-                            tags = {}
-                            for tag in col["tags"]:
+                            for tag in rss_model.tags:
                                 try:
-                                    db_tag = Tags.objects.get(tag=tag["term"].lower())
-                                    db_tag.contador += 1
-                                    db_tag.save()
-                                    tpos, check = TagsPostagens.objects.get_or_create(fk_tag=db_tag, fk_postagem=post)
-                                except Tags.DoesNotExist:
-                                    db_tag = Tags(tag=tag["term"].lower())
-                                    db_tag.save()
-                                    tpos, check = TagsPostagens.objects.get_or_create(fk_tag=db_tag, fk_postagem=post)
+                                    TagsPostagens.objects.get(fk_tag=tag, fk_postagem=post)
+                                except TagsPostagens.DoesNotExist:
+                                    tpos = TagsPostagens(fk_tag=tag, fk_postagem=post)
+                                    tpos.save()
         else:
             print("A consulta não retornou resultados")
 
