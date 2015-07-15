@@ -11,7 +11,7 @@ from Crawler.models import Tags, Imagens
 
 class RSSModel:
     def __init__(self, dados, link, link_real, fk_site):
-        self.titulo = ""
+        self.titulo = dados["title"]
         self.link = link
         self.link_real = link_real
         self.fk_site = fk_site
@@ -22,10 +22,17 @@ class RSSModel:
         self.transformar(dados)
 
     def transformar(self, dados):
-        try:
-            self.texto = self.cleaner.clean_html(dados["summary"])
-        except Exception:
-            self.texto = dados["summary"]
+        if "summary_detail" in dados:
+            try:
+                self.texto = self.cleaner.clean_html(dados["summary_detail"])
+            except Exception:
+                self.texto = dados["summary_detail"]
+        else:
+            try:
+                self.texto = self.cleaner.clean_html(dados["summary"])
+            except Exception:
+                self.texto = dados["summary"]
+
         if "tags" in dados:
             self.add_tags(dados["tags"])
         self.verificar_imagem(dados)

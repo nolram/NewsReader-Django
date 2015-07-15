@@ -32,7 +32,8 @@ def do_crawler():
                             break
                         if s.status_code == 200 or s.status_code == 301:
                             rss_model = RSSModel(coleta.entries[col], s.url, coleta.entries[col].link, site.fk_sites)
-                            post = Postagens(titulo=rss_model.link,
+                            post = Postagens(titulo=rss_model.titulo,
+                                             link=rss_model.link,
                                              link_origi=rss_model.link_real,
                                              texto=rss_model.texto,
                                              fk_site=rss_model.fk_site,
