@@ -1,0 +1,2 @@
+﻿SELECT max(ctid), pos.link_origi FROM "Crawler_postagens" AS pos GROUP BY pos.link_origi;
+SELECT * FROM "Crawler_postagens" AS pos WHERE pos.link_origi = 'http://exame.abril.com.br/negocios/noticias/vale-amplia-competicao-com-rio-tinto-e-bhp-na-china';

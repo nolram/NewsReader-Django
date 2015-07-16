@@ -6,7 +6,7 @@ import copy
 
 class Future:
 
-    def __init__(self,func,*param):
+    def __init__(self, func, *param):
         # Constructor
         self.__done=0
         self.__result=None

@@ -46,7 +46,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-USING_SQLITE = True
+USING_SQLITE = False
 
 ALLOWED_HOSTS = []
 

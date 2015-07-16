@@ -61,8 +61,8 @@ class Postagens(models.Model):
     fk_site = models.ForeignKey("Sites")
 
     titulo = models.CharField(max_length=500)
-    link = models.URLField(db_index=True, max_length=600)
-    link_origi = models.URLField(db_index=True, max_length=700, null=True)
+    link = models.URLField(db_index=True, max_length=600, unique=True)
+    link_origi = models.URLField(db_index=True, max_length=700, null=True, unique=True)
     texto = models.TextField(null=True)
 
     fk_imagem = models.ForeignKey("Imagens", related_name="img_postagem", null=True)
@@ -81,7 +81,7 @@ class Imagens(models.Model):
     img_cover = ImageField(null=True)
     data_inserido = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
-    img_link_orig = models.URLField(max_length=700)
+    img_link_orig = models.URLField(max_length=700, db_index=True, unique_for_year=True)
 
     def __str__(self):
         return "{0}".format(self.img_link_orig)

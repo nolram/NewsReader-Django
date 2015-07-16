@@ -1,26 +1,30 @@
 __author__ = 'nolram'
 
+import time
 import requests
 import feedparser as fp
 
-from Crawler.models import LinksRSS, Postagens, Tags, TagsPostagens, Imagens
-from django.core.files.temp import NamedTemporaryFile
-from django.core.files import File
-from lxml.html.clean import Cleaner
+from Crawler.models import LinksRSS, Postagens, TagsPostagens
 
 from requests.exceptions import ConnectionError
 
 from Crawler.rssmodel import RSSModel
 
 def do_crawler():
+    tempo1 = time.time()
     import django
     django.setup()
-    print("Coletando postagens")
+    print("Coletando postagens \n")
     sites = LinksRSS.objects.all()
+    tempo2 = time.time()
+    print("Tempo para pesquisar todos os links - {0} \n".format(str(tempo2-tempo1)))
     for site in sites:
+        tempo3 = time.time()
         coleta = fp.parse(site.link_rss)
-        print(site.link_rss)
+        tempo4 = time.time()
+        print("=RSS site {0}: {1}".format(site.link_rss, str(tempo4-tempo3)))
         if "entries" in coleta:
+            tempo3 = time.time()
             for col in range(0, len(coleta.entries)):
                 if col <= 50:
                     try:
@@ -46,7 +50,10 @@ def do_crawler():
                                 except TagsPostagens.DoesNotExist:
                                     tpos = TagsPostagens(fk_tag=tag, fk_postagem=post)
                                     tpos.save()
+            tempo4 = time.time()
+            print("===Banco de Dados: {0} \n".format(str(tempo4-tempo3)))
         else:
-            print("A consulta não retornou resultados")
-
+            print("A consulta não retornou resultados \n")
+    tempo5 = time.time()
+    print("Tempo total de Crawling: {0} \n".format(str(tempo5-tempo1)))
     print("Coleta Concluida")
