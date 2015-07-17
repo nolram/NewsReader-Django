@@ -1,13 +1,14 @@
 __author__ = 'nolram'
 
 import sys
+import django
 import requests
 import feedparser as fp
 
 from Crawler.models import LinksRSS, Postagens, TagsPostagens, Tags
 from Crawler.rssmodel import RSSModel
 
-from requests.exceptions import ConnectionError
+from requests.exceptions import ConnectionError, TooManyRedirects
 
 from django.db.utils import IntegrityError
 
@@ -16,10 +17,16 @@ from queue import Queue
 
 CONCURRENT = 50
 
-import django
 django.setup()
 
 def do_crawling(q):
+    """
+    Função de crawling de notícias pelos links RSS.
+    IMPORTANTE: Se houver alguma excessão não tratada a função nunca chegará em q.task_done()
+    e a Thread nunca se encerrará
+    :param q: Queue()
+    :return: None
+    """
     while True:
         site = q.get()
         print("== Coletando: {0} ==\n".format(site.link_rss))
@@ -34,14 +41,16 @@ def do_crawling(q):
                             s = requests.get(coleta.entries[col].link)
                         except ConnectionError:
                             break
+                        except TooManyRedirects:
+                            break
                         if s.status_code == 200 or s.status_code == 301:
                             try:
-                                rss_model = RSSModel(coleta.entries[col], s.url, coleta.entries[col].link, site.fk_sites)
+                                rss_model = RSSModel(coleta.entries[col], s.url, coleta.entries[col].link, site)
                                 post = Postagens(titulo=rss_model.titulo,
                                                  link=rss_model.link,
                                                  link_origi=rss_model.link_real,
                                                  texto=rss_model.texto,
-                                                 fk_site=rss_model.fk_site,
+                                                 fk_rss=rss_model.fk_rss,
                                                  fk_imagem=rss_model.imagem_banco)
                                 post.save()
 
@@ -64,7 +73,6 @@ def do_crawling(q):
                                         tpos = TagsPostagens(fk_tag=tag, fk_postagem=post)
                                         tpos.save()
                             except IntegrityError:
-                                #print("INTEGRIDADE: UNIQUE - {0}".format(coleta.entries[col].link))
                                 pass
 
                     except Postagens.MultipleObjectsReturned:
@@ -88,5 +96,3 @@ def testar():
         q.join()
     except KeyboardInterrupt:
         sys.exit(1)
-
-

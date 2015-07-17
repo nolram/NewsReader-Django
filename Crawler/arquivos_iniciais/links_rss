@@ -1,76 +1,75 @@
-tecmundo,http://www.baixaki.com.br/rss/tecnologia.xml
-uol,http://tecnologia.uol.com.br/ultnot/index.xml
-olhardigital,http://olhardigital.uol.com.br/rss
-ieee spectrum,http://feeds.feedburner.com/IeeeSpectrum
-zero hora,http://zh.clicrbs.com.br/rs/ultimas-noticias-rss/
-zero hora,http://zh.clicrbs.com.br/rs/esportes/ultimas-noticias-rss/
-zero hora,http://zh.clicrbs.com.br/rs/noticias/economia/ultimas-noticias-rss/
-uol,http://rss.uol.com.br/feed/noticias.xml
-folha de são paulo,http://feeds.folha.uol.com.br/emcimadahora/rss091.xml
-ig,http://ig.ultimosegundo.feedsportal.com/c/33511/f/637143/index.rss
-r7,http://noticias.r7.com/brasil/feed.xml
-yahoo! notícias,https://br.noticias.yahoo.com/rss/brasil
-g1,http://g1.globo.com/dynamo/rss2.xml
-g1,http://g1.globo.com/dynamo/brasil/rss2.xml
-g1,http://g1.globo.com/dynamo/ciencia-e-saude/rss2.xml
-g1,http://g1.globo.com/dynamo/concursos-e-emprego/rss2.xml
-g1,http://g1.globo.com/dynamo/economia/rss2.xml
-g1,http://g1.globo.com/dynamo/educacao/rss2.xml
-g1,http://g1.globo.com/dynamo/loterias/rss2.xml
-g1,http://g1.globo.com/dynamo/mundo/rss2.xml
-g1,http://g1.globo.com/dynamo/musica/rss2.xml
-g1,http://g1.globo.com/dynamo/tecnologia/rss2.xml
-new york times,http://rss.nytimes.com/services/xml/rss/nyt/InternationalHome.xml
-bbc uk,http://feeds.bbci.co.uk/news/rss.xml
-globo esporte,http://globoesporte.globo.com/servico/semantica/editorias/plantao/feed.rss
-imasters,http://imasters.com.br/feed/
-gizmodo br,http://feeds.feedburner.com/gizmodobr
-lancenet,http://www.lancenet.com.br/rss/latest/
-techtudo,http://feeds.feedburner.com/techtudo
-omelete,http://omelete.com.br.feedsportal.com/cinema
-omelete,http://omelete.com.br.feedsportal.com/quadrinhos
-omelete,http://omelete.com.br.feedsportal.com/series-e-tv
-omelete,http://omelete.com.br.feedsportal.com/games
-omelete,http://omelete.com.br.feedsportal.com/rss
-uol,http://esporte.uol.com.br/ultimas/index.xml
-uol,http://rss.uol.com.br/feed/economia.xml
-wired,http://feeds.wired.com/wired/index
-wired,http://www.wired.com/category/business/feed/
-wired,http://www.wired.com/category/design/feed/
-wired,http://www.wired.com/category/underwire/feed/
-wired,http://www.wired.com/category/gear/feed/
-wired,http://www.wired.com/category/reviews/feed/
-wired,http://www.wired.com/category/science/feed/
-wired,http://www.wired.com/category/science/science-blogs/feed/
-wired,http://www.wired.com/category/threatlevel/feed/
-wired,http://feeds.cnevids.com/brand/wired.mrss
-wired,http://www.wired.com/category/photo/feed/
-the verge,http://www.theverge.com/rss/index.xml
-the verge,http://www.theverge.com/tech/rss/index.xml
-the verge,http://www.theverge.com/apple/rss/index.xml
-the verge,http://www.theverge.com/google/rss/index.xml
-the verge,http://www.theverge.com/microsoft/rss/index.xml
-reuters,http://feeds.reuters.com/news/artsculture
-reuters,http://feeds.reuters.com/reuters/businessNews
-reuters,http://feeds.reuters.com/reuters/entertainment
-reuters,http://feeds.reuters.com/news/wealth
-reuters,http://feeds.reuters.com/reuters/scienceNews
-reuters,http://feeds.reuters.com/reuters/technologyNews
-reuters,http://feeds.reuters.com/reuters/topNews
-reuters,http://feeds.reuters.com/Reuters/worldNews
-exame,http://feeds.feedburner.com/EXAME-Noticias
-exame,http://feeds.feedburner.com/EXAME-Mercados
-exame,http://feeds.feedburner.com/Exame-Negocios
-exame,http://feeds.feedburner.com/Exame-Economia
-exame,http://feeds.feedburner.com/EXAME-Marketing
-exame,http://feeds.feedburner.com/Exame-Tecnologia
-exame,http://feeds.feedburner.com/Exame-Gestao
-exame,http://feeds.feedburner.com/Exame-GaleriaCiencia
-galileu,http://revistagalileu.globo.com/rss/ultimas/feed.xml
-bbc brasil,http://www.bbc.com/portuguese/index.xml
-bbc brasil,http://www.bbc.com/portuguese/topicos/brasil/index.xml
-bbc brasil,http://www.bbc.com/portuguese/topicos/internacional/index.xml
-bbc brasil,http://www.bbc.com/portuguese/topicos/economia/index.xml
-bbc brasil,http://www.bbc.com/portuguese/topicos/saude/index.xml
-bbc brasil,http://www.bbc.com/portuguese/topicos/ciencia_e_tecnologia/index.xml
-bbc brasil,http://www.bbc.com/portuguese/topicos/cultura/index.xml
+tecmundo,http://www.baixaki.com.br/rss/tecnologia.xml,{tecnologia:gadgets:games:ciência}
+uol,http://tecnologia.uol.com.br/ultnot/index.xml,{tecnologia:gadgets:games:ciência}
+olhardigital,http://olhardigital.uol.com.br/rss,{tecnologia:gadgets:games}
+ieee spectrum,http://feeds.feedburner.com/IeeeSpectrum,{tecnologia:gadgets:ciência}
+zero hora,http://zh.clicrbs.com.br/rs/ultimas-noticias-rss/,{notícias}
+zero hora,http://zh.clicrbs.com.br/rs/esportes/ultimas-noticias-rss/,{esportes}
+zero hora,http://zh.clicrbs.com.br/rs/noticias/economia/ultimas-noticias-rss/,{economia & negócios}
+uol,http://rss.uol.com.br/feed/noticias.xml,{notícias}
+folha de são paulo,http://feeds.folha.uol.com.br/emcimadahora/rss091.xml,{notícias}
+ig,http://ig.ultimosegundo.feedsportal.com/c/33511/f/637143/index.rss,{notícias}
+r7,http://noticias.r7.com/brasil/feed.xml,{notícias}
+yahoo! notícias,https://br.noticias.yahoo.com/rss/brasil,{notícias}
+g1,http://g1.globo.com/dynamo/rss2.xml,{notícias}
+g1,http://g1.globo.com/dynamo/brasil/rss2.xml,{notícias}
+g1,http://g1.globo.com/dynamo/ciencia-e-saude/rss2.xml,{ciência:saúde}
+g1,http://g1.globo.com/dynamo/concursos-e-emprego/rss2.xml,{empregos}
+g1,http://g1.globo.com/dynamo/economia/rss2.xml,{economia & negócios}
+g1,http://g1.globo.com/dynamo/educacao/rss2.xml,{educação}
+g1,http://g1.globo.com/dynamo/loterias/rss2.xml,{loterias}
+g1,http://g1.globo.com/dynamo/mundo/rss2.xml,{notícias}
+g1,http://g1.globo.com/dynamo/musica/rss2.xml,{música}
+g1,http://g1.globo.com/dynamo/tecnologia/rss2.xml,{tecnologia}
+new york times,http://rss.nytimes.com/services/xml/rss/nyt/InternationalHome.xml,{notícias}
+bbc uk,http://feeds.bbci.co.uk/news/rss.xml,{notícias}
+globo esporte,http://globoesporte.globo.com/servico/semantica/editorias/plantao/feed.rss,{esportes:futebol}
+imasters,http://imasters.com.br/feed/,{tecnologia:TI}
+gizmodo br,http://feeds.feedburner.com/gizmodobr,{tecnologia:gadgets:games:ciência}
+lancenet,http://www.lancenet.com.br/rss/latest/,{esportes}
+techtudo,http://feeds.feedburner.com/techtudo,{tecnologia:gadgets:games:ciência}
+omelete,http://omelete.com.br.feedsportal.com/cinema,{cinema:nerd}
+omelete,http://omelete.com.br.feedsportal.com/quadrinhos,{hq:nerd}
+omelete,http://omelete.com.br.feedsportal.com/series-e-tv,{tv:nerd}
+omelete,http://omelete.com.br.feedsportal.com/games,{games:nerd}
+omelete,http://omelete.com.br.feedsportal.com/rss,{notícias:nerd}
+uol,http://esporte.uol.com.br/ultimas/index.xml,{esportes}
+uol,http://rss.uol.com.br/feed/economia.xml,{economia & negócios}
+wired,http://feeds.wired.com/wired/index,{tecnologia:gadgets:ciência:ti}
+wired,http://www.wired.com/category/business/feed/,{economia & negócios}
+wired,http://www.wired.com/category/design/feed/,{design}
+wired,http://www.wired.com/category/underwire/feed/,{cinema:tv}
+wired,http://www.wired.com/category/gear/feed/,{auto}
+wired,http://www.wired.com/category/reviews/feed/,{gadgets}
+wired,http://www.wired.com/category/science/feed/,{ciência}
+wired,http://www.wired.com/category/science/science-blogs/feed/,{blog:ciência}
+wired,http://www.wired.com/category/threatlevel/feed/,{tecnologia}
+wired,http://www.wired.com/category/photo/feed/,{fotografia}
+the verge,http://www.theverge.com/rss/index.xml,{tecnologia:gadgets:games:ciência:ti}
+the verge,http://www.theverge.com/tech/rss/index.xml,{tecnologia:ti:gadgets}
+the verge,http://www.theverge.com/apple/rss/index.xml,{tecnologia:ti:gadgets}
+the verge,http://www.theverge.com/google/rss/index.xml,{tecnologia:ti:gadgets}
+the verge,http://www.theverge.com/microsoft/rss/index.xml,{tecnologia:ti:gadgets}
+reuters,http://feeds.reuters.com/news/artsculture,{cultura}
+reuters,http://feeds.reuters.com/reuters/businessNews,{economia & negócios}
+reuters,http://feeds.reuters.com/reuters/entertainment,{cinema:tv:celebridades}
+reuters,http://feeds.reuters.com/news/wealth,{previsão do tempo}
+reuters,http://feeds.reuters.com/reuters/scienceNews,{ciência}
+reuters,http://feeds.reuters.com/reuters/technologyNews,{tecnologia}
+reuters,http://feeds.reuters.com/reuters/topNews,{notícias}
+reuters,http://feeds.reuters.com/Reuters/worldNews,{notícias}
+exame,http://feeds.feedburner.com/EXAME-Noticias,{notícias}
+exame,http://feeds.feedburner.com/EXAME-Mercados,{economia & negócios}
+exame,http://feeds.feedburner.com/Exame-Negocios,{economia & negócios}
+exame,http://feeds.feedburner.com/Exame-Economia,{economia & negócios}
+exame,http://feeds.feedburner.com/EXAME-Marketing,{propaganda & marketing}
+exame,http://feeds.feedburner.com/Exame-Tecnologia,{tecnologia}
+exame,http://feeds.feedburner.com/Exame-Gestao,{administração}
+exame,http://feeds.feedburner.com/Exame-GaleriaCiencia,{ciência:fotografia}
+galileu,http://revistagalileu.globo.com/rss/ultimas/feed.xml,{ciência:notícias:tecnologia}
+bbc brasil,http://www.bbc.com/portuguese/index.xml,{notícias}
+bbc brasil,http://www.bbc.com/portuguese/topicos/brasil/index.xml,{notícias}
+bbc brasil,http://www.bbc.com/portuguese/topicos/internacional/index.xml,{notícias}
+bbc brasil,http://www.bbc.com/portuguese/topicos/economia/index.xml,{economia & negócios}
+bbc brasil,http://www.bbc.com/portuguese/topicos/saude/index.xml,{saúde}
+bbc brasil,http://www.bbc.com/portuguese/topicos/ciencia_e_tecnologia/index.xml,{ciência:tecnologia}
+bbc brasil,http://www.bbc.com/portuguese/topicos/cultura/index.xml,{cultura}

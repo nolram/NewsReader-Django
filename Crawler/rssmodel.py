@@ -13,11 +13,11 @@ from Crawler.models import Imagens
 from django.db.utils import IntegrityError
 
 class RSSModel:
-    def __init__(self, dados, link, link_real, fk_site):
+    def __init__(self, dados, link, link_real, fk_rss):
         self.titulo = dados["title"]
         self.link = link
         self.link_real = link_real
-        self.fk_site = fk_site
+        self.fk_rss = fk_rss
         self.texto = ""
         self.imagem_banco = None
         self.tags = []

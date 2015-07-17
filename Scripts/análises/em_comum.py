@@ -8,7 +8,7 @@ Adicionando os sites...
 Adicionando os links RSS
 Término do algoritmo...
 >>> import feedparser as fp
->>> from Crawler.models import Categorias, LinksRSS, Postagens, Sites, Tags, TagsPostagens
+>>> from Crawler.models import LinksRSS
 >>> all = LinksRSS.objects.all()
 >>> all_links = LinksRSS.objects.all()
 >>> del all
@@ -302,7 +302,7 @@ Página http://www.bbc.co.uk/portuguese/topicos/cultura/ retornou um erro
 dict_keys(['headers', 'href', 'encoding', 'status', 'entries', 'namespaces', 'feed', 'version', 'updated_parsed', 'bozo_exception', 'updated', 'bozo'])
 >>> a.bozo_exception
 CharacterEncodingOverride('document declared as us-ascii, but parsed as utf-8',)
->>> from Crawler.threading import Future
+>>> from Scripts.threading import Future
 >>> def em_comum():
 	propriedades = {}
 	erros = []

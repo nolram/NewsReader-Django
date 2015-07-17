@@ -58,7 +58,7 @@ class RSSCategorias(models.Model):
 
 class Postagens(models.Model):
     id_postagem = models.AutoField(primary_key=True)
-    fk_site = models.ForeignKey("Sites")
+    fk_rss = models.ForeignKey("LinksRSS")
 
     titulo = models.CharField(max_length=500)
     link = models.URLField(db_index=True, max_length=600, unique=True)
@@ -101,7 +101,7 @@ class TagsPostagens(models.Model):
 
 class Categorias(models.Model):
     id_categoria = models.AutoField(primary_key=True)
-    categoria = models.CharField(max_length=100, db_index=True)
+    categoria = models.CharField(max_length=100, db_index=True, unique=True)
 
     def __str__(self):
         return "{0}".format(self.categoria)
