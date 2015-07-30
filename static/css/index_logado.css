@@ -5,3 +5,8 @@
 .news_info{
     text-align: center;
 }
+
+.centralizado {
+    margin: 0 auto;
+    float: none;
+}

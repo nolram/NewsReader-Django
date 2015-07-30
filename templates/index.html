@@ -1,11 +1,21 @@
 {% extends "modelos/model.html" %}
+{% load staticfiles %}
 
-{% block title %}Index{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block title %}Flyn{% endblock %}
 
 {% block content %}
-    <div class="hero-unit">
-        <h1>Flyn News Reader</h1>
-        <p>Seja bem vindo ao Flyn. O seu leitor de notícias inteligente</p>
-        <a href="/login/" class="btn btn-primary btn-large">Login</a>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <div class="jumbotron-contents">
+                    <h1>Flyn News Reader</h1>
+                    <p>Em breve</p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

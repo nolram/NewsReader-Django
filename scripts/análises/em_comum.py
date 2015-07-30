@@ -302,7 +302,7 @@ Página http://www.bbc.co.uk/portuguese/topicos/cultura/ retornou um erro
 dict_keys(['headers', 'href', 'encoding', 'status', 'entries', 'namespaces', 'feed', 'version', 'updated_parsed', 'bozo_exception', 'updated', 'bozo'])
 >>> a.bozo_exception
 CharacterEncodingOverride('document declared as us-ascii, but parsed as utf-8',)
->>> from Scripts.threading import Future
+>>> from scripts.threading import Future
 >>> def em_comum():
 	propriedades = {}
 	erros = []

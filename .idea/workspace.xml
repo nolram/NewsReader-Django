@@ -1,27 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Crawler/tasks.py" line="97" />
+    <bookmark url="file://$PROJECT_DIR$/scripts/tasks.py" line="97" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawler/arquivos_iniciais/categorias.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cron_job.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cron_tasks.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/análises/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/crawler_rss_thread_v2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/site/postagem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/rssmodel_w_nltk.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0002_auto_20150716_1411.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/migrations/0003_auto_20150716_1942.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Crawler/threading.py" afterPath="$PROJECT_DIR$/Scripts/threading.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/analise.py" afterPath="$PROJECT_DIR$/Scripts/análises/analise.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/em_comum.py" afterPath="$PROJECT_DIR$/Scripts/análises/em_comum.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/em_comum_code.py" afterPath="$PROJECT_DIR$/Scripts/análises/em_comum_code.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/res_analise.py" afterPath="$PROJECT_DIR$/Scripts/análises/res_analise.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/add_some_sites.py" afterPath="$PROJECT_DIR$/Crawler/add_some_sites.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" afterPath="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawler/scraper.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Site/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/celerybeat-schedule" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/erl_crash.dump" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logo-gizmodo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/postagem.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Crawler/management/commands/test_thread.py" afterPath="$PROJECT_DIR$/Crawler/management/commands/coletar_rss.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Crawler/tasks.py" afterPath="$PROJECT_DIR$/scripts/tasks.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SQL/deletar_duplicados.sql" afterPath="$PROJECT_DIR$/scripts/sql/deletar_duplicados.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SQL/selecionar_duplicados" afterPath="$PROJECT_DIR$/scripts/sql/selecionar_duplicados" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/__init__.py" afterPath="$PROJECT_DIR$/scripts/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/análises/analise.py" afterPath="$PROJECT_DIR$/scripts/análises/analise.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/análises/em_comum.py" afterPath="$PROJECT_DIR$/scripts/análises/em_comum.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/análises/em_comum_code.py" afterPath="$PROJECT_DIR$/scripts/análises/em_comum_code.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/análises/res_analise.py" afterPath="$PROJECT_DIR$/scripts/análises/res_analise.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/teste_tasks_coleta.py" afterPath="$PROJECT_DIR$/scripts/teste_tasks_coleta.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py" afterPath="$PROJECT_DIR$/scripts/crawler_rss_thread.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scripts/threading.py" afterPath="$PROJECT_DIR$/scripts/threading.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cron_job.sh" afterPath="$PROJECT_DIR$/scripts/análises/cron_job.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/cron_tasks.py" afterPath="$PROJECT_DIR$/scripts/análises/cron_tasks.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/configuracoes.html" afterPath="$PROJECT_DIR$/templates/site/configuracoes.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/index_logado.html" afterPath="$PROJECT_DIR$/templates/site/index_logado.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/admin.py" afterPath="$PROJECT_DIR$/Site/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/index_logado.css" afterPath="$PROJECT_DIR$/static/css/index_logado.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/models.py" afterPath="$PROJECT_DIR$/Crawler/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/models.py" afterPath="$PROJECT_DIR$/Site/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/rssmodel.py" afterPath="$PROJECT_DIR$/Crawler/rssmodel.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/settings.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py" afterPath="$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/views.py" afterPath="$PROJECT_DIR$/Site/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NewsReaderDjango.iws" />
@@ -38,6 +59,18 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
@@ -47,36 +80,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="teste_tasks_coleta_thread.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.214286">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="e#23#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_logado.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index_logado.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.666667">
-              <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rssmodel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-              <folding>
-                <element signature="e#23#34#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.83208954">
+              <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -85,19 +104,7 @@
         <entry file="file://$PROJECT_DIR$/Crawler/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20812182">
-              <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+              <caret line="74" column="25" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -122,20 +129,14 @@
       <list>
         <option value="$PROJECT_DIR$/NewsReaderDjango/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/Site/admin.py" />
         <option value="$PROJECT_DIR$/Crawler/cron.py" />
         <option value="$PROJECT_DIR$/NewsReaderDjango/celery.py" />
-        <option value="$PROJECT_DIR$/static/css/site.css" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/static/css/universal.css" />
         <option value="$PROJECT_DIR$/templates/modelos/barra_navegacao.html" />
         <option value="$PROJECT_DIR$/templates/modelos/model.html" />
         <option value="$PROJECT_DIR$/NewsReaderDjango/urls.py" />
         <option value="$PROJECT_DIR$/templates/index_logado.html" />
-        <option value="$PROJECT_DIR$/Site/views.py" />
-        <option value="$PROJECT_DIR$/static/css/index_logado.css" />
-        <option value="$PROJECT_DIR$/templates/postagem.html" />
         <option value="$PROJECT_DIR$/templates/configuracoes.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_sites" />
@@ -144,25 +145,36 @@
         <option value="$PROJECT_DIR$/Crawler/management/commands/first_add.py" />
         <option value="$PROJECT_DIR$/Crawler/scraper.py" />
         <option value="$PROJECT_DIR$/Crawler/tasks.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Crawler/RSSModel.py" />
         <option value="$PROJECT_DIR$/Scripts/teste_tasks_coleta.py" />
         <option value="$PROJECT_DIR$/Crawler/threading.py" />
         <option value="$PROJECT_DIR$/Crawler/admin.py" />
         <option value="$PROJECT_DIR$/Scripts/__init__.py" />
-        <option value="$PROJECT_DIR$/Crawler/management/commands/test_thread.py" />
         <option value="$PROJECT_DIR$/Scripts/cron_job.sh" />
         <option value="$PROJECT_DIR$/Scripts/threading.py" />
-        <option value="$PROJECT_DIR$/Site/models.py" />
         <option value="$PROJECT_DIR$/cron_job.sh" />
-        <option value="$PROJECT_DIR$/cron_tasks.py" />
         <option value="$PROJECT_DIR$/Crawler/arquivos_iniciais/categorias.txt" />
         <option value="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" />
-        <option value="$PROJECT_DIR$/Crawler/rssmodel.py" />
-        <option value="$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py" />
         <option value="$PROJECT_DIR$/Crawler/add_some_sites.py" />
-        <option value="$PROJECT_DIR$/Crawler/models.py" />
+        <option value="$PROJECT_DIR$/cron_tasks.py" />
+        <option value="$PROJECT_DIR$/result.txt" />
+        <option value="$PROJECT_DIR$/static/css/index_logado.css" />
+        <option value="$PROJECT_DIR$/templates/postagem.html" />
+        <option value="$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py" />
+        <option value="$PROJECT_DIR$/Scripts/rssmodel_w_nltk.py" />
         <option value="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
+        <option value="$PROJECT_DIR$/Site/models.py" />
+        <option value="$PROJECT_DIR$/Site/admin.py" />
+        <option value="$PROJECT_DIR$/Crawler/models.py" />
+        <option value="$PROJECT_DIR$/static/css/site.css" />
+        <option value="$PROJECT_DIR$/static/css/index.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/scripts/crawler_rss_thread.py" />
+        <option value="$PROJECT_DIR$/Crawler/management/commands/test_thread.py" />
+        <option value="$PROJECT_DIR$/scripts/crawler_rss_thread_v2.py" />
+        <option value="$PROJECT_DIR$/Crawler/rssmodel.py" />
+        <option value="$PROJECT_DIR$/Site/views.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -174,9 +186,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="1374" />
-    <option name="height" value="742" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -247,7 +259,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NewsReaderDjango" />
+              <option name="myItemId" value="Site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,12 +274,28 @@
     <property name="options.lastSelected" value="Errors" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Virtualenv/py3_django/bin/python3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../django_essencial/scrum" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="dynamic.classpath" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="79" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="95" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="101" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="998" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="78" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="93" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1003" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -276,10 +304,11 @@
       <recent name="$PROJECT_DIR$/static/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/site" />
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/Scripts" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Scripts/análises" />
-      <recent name="$PROJECT_DIR$/Crawler/management/commands" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.NewsReaderDjango">
@@ -546,29 +575,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1374" height="742" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2613293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22644377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917318" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.327787" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -584,175 +613,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09950249">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/celerybeat-schedule">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/celery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/icheck.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/universal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.078125">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/shortcuts/inview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13020833">
-          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/modelos/model.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4347826">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/modelos/barra_navegacao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0">
-          <caret line="28" column="98" selection-start-line="28" selection-start-column="98" selection-end-line="28" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/postagem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4076087">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/index_logado.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.104166664">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.234375">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2542373">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib64/python3.4/site-packages/lxml/html/clean.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/configuracoes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/scraper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.058631923">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/erl_crash.dump">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06122449">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/management/commands/run_idle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1465798">
@@ -760,17 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/análises/em_comum.py">
+    <entry file="file://$PROJECT_DIR$/scripts/análises/em_comum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26384366">
           <caret line="240" column="27" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8469388">
-          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -781,7 +639,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/análises/res_analise.py">
+    <entry file="file://$PROJECT_DIR$/scripts/análises/res_analise.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="10.876222">
           <caret line="354" column="145" selection-start-line="354" selection-start-column="131" selection-end-line="354" selection-end-column="145" />
@@ -795,22 +653,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/teste_tasks_coleta.py">
+    <entry file="file://$PROJECT_DIR$/scripts/teste_tasks_coleta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="54" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/deletar_duplicados.sql">
+    <entry file="file://$PROJECT_DIR$/scripts/sql/deletar_duplicados.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6923077">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="93" />
@@ -824,55 +674,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/__init__.py">
+    <entry file="file://$PROJECT_DIR$/scripts/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/management/commands/test_thread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20521173">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/análises/analise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2345277">
-          <caret line="440" column="4" selection-start-line="440" selection-start-column="4" selection-end-line="440" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/threading.py">
+    <entry file="file://$PROJECT_DIR$/scripts/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44299674">
           <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Site/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.117263846">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cron_job.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029315962">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17589577">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,15 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cron_tasks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,76 +699,557 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.89520425">
           <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/kronos/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6717428">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/análises/cron_job.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030456852">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/análises/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/add_some_sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.030456852">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70050764">
+          <caret line="37" column="54" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/análises/cron_tasks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30456853">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/64df6365-d791-48bf-960c-607a7096553d">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>64df6365-d791-48bf-960c-607a7096553d</OriginalElement>
+          <nodes>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.auth_group_permissions</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_ts_parser</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_database</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_activity</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_linksrss</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_database_conflicts</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.auth_user</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_tags</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_all_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_user_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.djkombu_message</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_namespace</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_prepared_xacts</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_shdepend</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_class</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_all_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_available_extensions</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_user_mappings</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_replication</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_attribute</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_timezone_names</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_database</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_opfamily</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_shseclabel</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_shadow</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statistic</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_pltemplate</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_foreign_table</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_language</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_auth_members</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_aggregate</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_user_mapping</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_sites</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_user_sequences</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_available_extension_versions</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_tagspostagens</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_cursors</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_proc</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_range</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.django_migrations</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_locks</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_categorias</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_rewrite</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_index</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_constraint</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_type</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.django_content_type</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.django_session</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.django_admin_log</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_opclass</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_rules</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.auth_user_user_permissions</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_matviews</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Site_usuariosprovider</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_amproc</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_description</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_postagens</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_cast</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.auth_user_groups</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_seclabel</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_largeobject_metadata</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_attrdef</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_inherits</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_ts_config_map</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_seclabels</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_user_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_tablespace</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Crawler_sitescategorias</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_all_sequences</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_authid</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_amop</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_sys_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_user_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_ts_dict</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_prepared_statements</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.auth_group</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_ts_config</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_ts_template</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_event_trigger</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_user_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_largeobject</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_db_role_setting</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_enum</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_shdescription</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_operator</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_views</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_trigger</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_group</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_conversion</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stats</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_all_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_extension</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.auth_permission</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_foreign_server</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_settings</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_bgwriter</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_roles</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.Site_providers</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_depend</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_all_tables</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_stat_sys_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.public.djkombu_queue</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_statio_sys_indexes</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_default_acl</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_collation</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_am</node>
+            <node x="" y="">64df6365-d791-48bf-960c-607a7096553d.table:newsreader.pg_catalog.pg_user</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.14431604407417362" x="1851.0" y="1824.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/0d7bdd5a-e793-445f-8af7-b8dbe2f5da98">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>0d7bdd5a-e793-445f-8af7-b8dbe2f5da98</OriginalElement>
+          <nodes>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_opclass</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_all_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_pltemplate</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_extension</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_ts_config_map</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_roles</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_namespace</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_amop</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.django_session</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_auth_members</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_cursors</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_all_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_user_mapping</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_all_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_constraint</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_inherits</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_user_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_enum</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_largeobject_metadata</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_ts_parser</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_attrdef</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_linksrss</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_opfamily</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_authid</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_all_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_tags</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.auth_user_user_permissions</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_trigger</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_foreign_server</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_user_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_db_role_setting</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_postagens</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_user</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_shdescription</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_seclabel</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stats</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.auth_user_groups</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_rules</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Site_usuariosprovider</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.djkombu_queue</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.djkombu_message</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_available_extension_versions</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_activity</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_ts_dict</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_language</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_timezone_names</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_ts_template</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_user_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_group</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_conversion</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_am</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_bgwriter</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_ts_config</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_default_acl</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_shseclabel</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_shadow</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.auth_group_permissions</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_shdepend</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_views</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_tagspostagens</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_available_extensions</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_replication</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_class</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_aggregate</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_largeobject</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_sys_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_depend</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_database</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_prepared_statements</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_range</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.django_content_type</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.django_migrations</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Site_providers</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_sys_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_seclabels</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.django_admin_log</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.auth_group</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_rewrite</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_database</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_collation</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_proc</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_event_trigger</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_user_mappings</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_database_conflicts</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_sitescategorias</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_sys_indexes</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_all_sequences</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_description</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_prepared_xacts</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.auth_user</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_cast</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_settings</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_foreign_table</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_type</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statistic</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_categorias</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_matviews</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_user_tables</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_attribute</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_statio_user_sequences</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_operator</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_index</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_amproc</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_tablespace</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.pg_catalog.pg_locks</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.auth_permission</node>
+            <node x="" y="">0d7bdd5a-e793-445f-8af7-b8dbe2f5da98.table:newsreader.public.Crawler_sites</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8443160440741735" x="827.0" y="204.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/.directory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/IPython/html/static/style/style.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="15" column="1946" selection-start-line="15" selection-start-column="1946" selection-end-line="15" selection-end-column="1946" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/lxml/html/clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63790184">
+          <caret line="196" column="13" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index_logado.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/django/db/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66497463">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/rssmodel_w_nltk.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42957747">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="58" selection-start-line="143" selection-start-column="58" selection-end-line="143" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/sql/selecionar_duplicados">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/análises/nltk_testes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="277" column="23" selection-start-line="277" selection-start-column="23" selection-end-line="277" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/postagem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3844732">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19014084">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.556338">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1901408">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/modelos/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16635859">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.471831">
+          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13308688">
+          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/modelos/barra_navegacao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/django/db/models/expressions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33274648">
+          <caret line="436" column="8" selection-start-line="436" selection-start-column="8" selection-end-line="436" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/crawler_rss_thread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/análises/analise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="171" column="121" selection-start-line="171" selection-start-column="105" selection-end-line="171" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/django/db/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.788733">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/management/commands/coletar_rss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="54" selection-start-line="144" selection-start-column="54" selection-end-line="144" selection-end-column="54" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0870337">
-          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-          <folding />
+        <state vertical-scroll-proportion="0.468">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="47" />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index_logado.html">
+    <entry file="file://$PROJECT_DIR$/scripts/crawler_rss_thread_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.666667">
-          <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.36619717">
+          <caret line="109" column="10" selection-start-line="109" selection-start-column="10" selection-end-line="109" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.22183098">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#23#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py">
+    <entry file="file://$PROJECT_DIR$/Crawler/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.214286">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+          <caret line="74" column="25" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/add_some_sites.py">
+    <entry file="file://$PROJECT_DIR$/Site/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.49238577">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#33#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20812182">
-          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.83208954">
+          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
           <folding />
         </state>
       </provider>

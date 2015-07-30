@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Providers, UsuariosProvider
+from .models import ProvedoresDeLogin, UsuariosProvedor
 
 
-admin.site.register(Providers)
-admin.site.register(UsuariosProvider)
+admin.site.register(ProvedoresDeLogin)
+admin.site.register(UsuariosProvedor)

@@ -1,16 +1,42 @@
 __author__ = 'nolram'
 
 import json
+import html
 import operator
 import requests
 
+from dateutil import parser
+
 from django.core.files.temp import NamedTemporaryFile
 from django.core.files import File
+from django.utils import timezone
+from django.db.utils import IntegrityError
+
 from lxml.html.clean import Cleaner
 
 from Crawler.models import Imagens
 
-from django.db.utils import IntegrityError
+SEMANAS = {"Seg": "Mon",
+           "Ter": "Tue",
+           "Qua": "Wed",
+           "Qui": "Thu",
+           "Sex": "Fri",
+           "Sab": "Sat",
+           "Dom": "Sun"}
+
+MESES = {"Jan": "Jan",
+         "Fev": "Feb",
+         "Mar": "Mar",
+         "Abr": "Apr",
+         "Mai": "May",
+         "Jun": "Jun",
+         "Jul": "Jul",
+         "Ago": "Aug",
+         "Set": "Sep",
+         "Out": "Oct",
+         "Nov": "Nov",
+         "Dez": "Dec"}
+
 
 class RSSModel:
     def __init__(self, dados, link, link_real, fk_rss):
@@ -20,8 +46,9 @@ class RSSModel:
         self.fk_rss = fk_rss
         self.texto = ""
         self.imagem_banco = None
+        self.data_publicacao = None
         self.tags = []
-        self.cleaner = Cleaner(allow_tags=[''], remove_unknown_tags=False)
+        self.cleaner = Cleaner(allow_tags=['p', 'div'], kill_tags=["img"], remove_unknown_tags=False)
         self.converter(dados)
 
     def converter(self, dados):
@@ -29,30 +56,47 @@ class RSSModel:
             try:
                 tmp = json.loads(dados["summary_detail"])
                 if len(tmp["values"]) != 0:
-                    self.texto = self.cleaner.clean_html(tmp["values"])
+                    self.texto = self.cleaner.clean_html(html.unescape(tmp["values"]))
                 else:
                     try:
-                        self.texto = self.cleaner.clean_html(dados["summary"])
+                        self.texto = self.cleaner.clean_html(html.unescape(dados["summary"]))
                     except Exception:
-                        self.texto = dados["summary"]
+                        self.texto = html.unescape(dados["summary"])
             except ValueError:
                 try:
-                    self.texto = self.cleaner.clean_html(dados["summary"])
+                    self.texto = self.cleaner.clean_html(html.unescape(dados["summary"]))
                 except Exception:
-                    self.texto = dados["summary"]
+                    self.texto = html.unescape(dados["summary"])
             except Exception:
                 try:
-                    self.texto = self.cleaner.clean_html(dados["summary"])
+                    self.texto = self.cleaner.clean_html(html.unescape(dados["summary"]))
                 except Exception:
-                    self.texto = dados["summary"]
+                    self.texto = html.unescape(dados["summary"])
         else:
             try:
-                self.texto = self.cleaner.clean_html(dados["summary"])
+                self.texto = self.cleaner.clean_html(html.unescape(dados["summary"]))
             except Exception:
-                self.texto = dados["summary"]
+                self.texto = html.unescape(dados["summary"])
 
         if "tags" in dados:
             self.add_tags(dados["tags"])
+
+        if "published" in dados and dados["published"] is not None:
+            try:
+                self.data_publicacao = parser.parse(dados["published"])
+            except ValueError:
+                try:
+                    data = self.converter_data(dados["published"])
+                    if data is not None:
+                        self.data_publicacao = parser.parse(data)
+                    else:
+                        self.data_publicacao = timezone.now()
+                except ValueError:
+                    print("Falha ao converter: {0}".format(self.converter_data(dados["published"])))
+                    self.data_publicacao = timezone.now()
+        else:
+            self.data_publicacao = timezone.now()
+
         self.verificar_imagem(dados)
         
     def verificar_imagem(self, dados):
@@ -113,3 +157,21 @@ class RSSModel:
     def add_tags(self, tags):
         for tag in tags:
             self.tags.append(tag["term"].lower())
+
+    def converter_data(self, data):
+        # Seg, 27 Jul 2015 12:05:00 -0300
+        data_modificada = None
+        semana = data[:3]
+        mes = data[8:11]
+        if mes in MESES:
+            data_modificada = data.replace(mes, MESES[mes])
+            if semana in SEMANAS:
+                data_modificada = data.replace(semana, SEMANAS[semana])
+            else:
+                print("Semana não encontrada: {0}".format(semana))
+                data_modificada = None
+        else:
+            print("Mês não encontrado: {0}".format(mes))
+            data_modificada = None
+
+        return data_modificada

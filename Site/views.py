@@ -13,7 +13,7 @@ from Crawler.models import Postagens
 
 def index(request):
     if request.user.is_authenticated():
-        return render(request, "index_logado.html", {"usuario": request.user})
+        return render(request, "site/index_logado.html", {"usuario": request.user})
     else:
         return render(request, "index.html")
 
@@ -43,16 +43,16 @@ def pag_postagem(request, id_postagem):
         raise Http404("Nenhuma postagem encontrada com esse ID.")
 
     dic_pos = {"postagem": postagem, "usuario": request.user}
-    return render(request, "postagem.html", dic_pos)
+    return render(request, "site/postagem.html", dic_pos)
 
 def logout_view(request):
     logout(request)
     return redirect("/")
 
 def get_last_news(request, numero):
-    todas_postagens = Postagens.objects.all().order_by("-data_adicionado")
+    todas_postagens = Postagens.objects.all().order_by("-horario_postagem_site")
 
-    paginator = Paginator(todas_postagens, 10)
+    paginator = Paginator(todas_postagens, 20)
 
     try:
         postagens = paginator.page(numero)
@@ -75,7 +75,8 @@ def get_last_news(request, numero):
 
     pythonserializer = serializers.get_serializer("python")()
     serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
-            fields=('fk_site', 'titulo', 'link', 'texto', 'img_thumbnail_min',
-                    'img_cover', 'data_adicionado', 'data_modificado', 'horario_postagem_site'))
+                                                               fields=('fk_rss', 'titulo', 'link', 'texto',
+                                                                       'data_adicionado', 'data_modificado',
+                                                                       'horario_postagem_site'))
 
     return JsonResponse(serializedpage)

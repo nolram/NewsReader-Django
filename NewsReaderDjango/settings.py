@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 """
 Django settings for NewsReaderDjango project.
 
@@ -13,27 +12,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 from django.conf import global_settings
 from datetime import timedelta
-# ^^^ The above is required if you want to import from the celery
-# library.  If you don't have this then `from celery.schedules import`
-# becomes `proj.celery.schedules` in Python 2.x since it allows
-# for relative imports by default.
-
-# Celery settings
-
-BROKER_URL = 'django://'
-
-#: Only add pickle to this list if your broker is secured
-#: from unwanted access (see userguide/security.html)
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_SERIALIZER = 'json'
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ENV_PATH = os.path.abspath(os.path.dirname(__file__))
 
-
-MEDIA_ROOT = os.path.join(ENV_PATH, 'media/')
-MEDIA_URL = "/media/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -64,14 +46,8 @@ INSTALLED_APPS = (
     'Site',
     'Crawler',
     'sorl.thumbnail',
+    'kronos'
 )
-
-CELERYBEAT_SCHEDULE = {
-    'add-every-30-minutes': {
-        'task': 'tasks.do_crawler',
-        'schedule': timedelta(minutes=25),
-    },
-}
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -86,23 +62,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'NewsReaderDjango.urls'
 
 WSGI_APPLICATION = 'NewsReaderDjango.wsgi.application'
-
-
-#CRON_CLASSES = [
-#    "Crawler.cron.CronColeta",
-#    # ...
-#]
-
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#
-# }
 
 if USING_SQLITE:
     DATABASES = {
@@ -140,13 +99,16 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT=os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TEMPLATES = [
     {
@@ -175,3 +137,9 @@ TEMPLATES = [
 LOGIN_URL = '/login/'
 
 BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
+
+#KRONOS_PYTHONPATH = "/home/nolram/Virtualenv/py3_django/bin/python3"
+
+KRONOS_PREFIX = "source /home/nolram/Virtualenv/py3_django/bin/activate &&"
+
+KRONOS_POSTFIX = "> /home/nolram/log_thread.log 2>&1 "

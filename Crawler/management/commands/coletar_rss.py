@@ -1,8 +1,11 @@
 __author__ = 'nolram'
+import kronos
+
 from django.core.management.base import NoArgsCommand
 
-from Scripts import teste_tasks_coleta_thread
+from scripts import crawler_rss_thread_v2
 
+@kronos.register('*/10 * * * *')
 class Command(NoArgsCommand):
     def handle_noargs(self, **options):
-        teste_tasks_coleta_thread.testar()
+        crawler_rss_thread_v2.run()

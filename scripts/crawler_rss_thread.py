@@ -11,11 +11,16 @@ from Crawler.rssmodel import RSSModel
 from requests.exceptions import ConnectionError, TooManyRedirects
 
 from django.db.utils import IntegrityError
+from django.db import close_old_connections
+from django.db.models import F
 
 from threading import Thread
 from queue import Queue
+from datetime import datetime
 
-CONCURRENT = 50
+CONCURRENT = 25
+
+DEBUG = True
 
 django.setup()
 
@@ -29,7 +34,9 @@ def do_crawling(q):
     """
     while True:
         site = q.get()
-        print("== Coletando: {0} ==\n".format(site.link_rss))
+        if DEBUG:
+            mensagem = ""
+            mensagem += "== {0} - Coletando: {1} == \n".format(datetime.now(), site.link_rss)
         coleta = fp.parse(site.link_rss)
         if "entries" in coleta:
             for col in range(0, len(coleta.entries)):
@@ -40,8 +47,10 @@ def do_crawling(q):
                         try:
                             s = requests.get(coleta.entries[col].link)
                         except ConnectionError:
+                            mensagem += "ERRO: ConnectionError: {0}".format(coleta.entries[col].link)
                             break
                         except TooManyRedirects:
+                            mensagem += "ERRO: TooManyRedirects: {0}".format(coleta.entries[col].link)
                             break
                         if s.status_code == 200 or s.status_code == 301:
                             try:
@@ -58,7 +67,7 @@ def do_crawling(q):
                                 for t in rss_model.tags:
                                     try:
                                         db_tag = Tags.objects.get(tag=t)
-                                        db_tag.contador += 1
+                                        db_tag.contador = F('contador') + 1
                                         db_tag.save()
                                         tags.append(db_tag)
                                     except Tags.DoesNotExist:
@@ -73,13 +82,25 @@ def do_crawling(q):
                                         tpos = TagsPostagens(fk_tag=tag, fk_postagem=post)
                                         tpos.save()
                             except IntegrityError:
-                                pass
+                                mensagem += "ERRO: Valor já inserido no banco: {0}".format(s.url)
+                        else:
+                            mensagem += "ERRO: código retornado pelo site: {0}".format(s.status_code)
 
                     except Postagens.MultipleObjectsReturned:
-                        print("ERRO: Multiplos objetos Retornados - {0}".format(coleta.entries[col].link))
+                        if DEBUG:
+                            mensagem += "ERRO: Multiplos objetos Retornados - {0} \n".format(
+                                coleta.entries[col].link)
+                        else:
+                            pass
         else:
-            print("A consulta não retornou resultados \n")
-        print("Coleta Concluida - {0}".format(site.link_rss))
+            if DEBUG:
+                mensagem += "A consulta não retornou resultados \n"
+            else:
+                pass
+        if DEBUG:
+            mensagem += "==== {0} - Coleta Concluida - {1} ==== \n".format(datetime.now(), site.link_rss)
+            print(mensagem)
+        close_old_connections()
         q.task_done()
 
 def testar():

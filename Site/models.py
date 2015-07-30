@@ -1,23 +1,78 @@
 from django.db import models
 from django.contrib.auth.models import User
+from Crawler.models import Postagens
 
 
-class UsuariosProvider(models.Model):
-    id_usuario = models.ForeignKey(User, primary_key=True, unique=True)
-    fk_provider = models.ForeignKey("Providers", related_name="fk_provider")
-    id_provider = models.TextField(db_index=True)
+class UsuariosProvedor(models.Model):
+    id_usuario = models.OneToOneField(User, primary_key=True)
+    fk_provedor = models.ForeignKey("ProvedoresDeLogin", related_name="fk_provedor")
+    key_o_auth = models.CharField(max_length=700, db_index=True)
     data_registro = models.DateTimeField(auto_now_add=True)
     data_atualizacao = models.DateTimeField(auto_now=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return u"{0} - {1}".format(self.id_usuario.email, self.fk_provider.nome)
 
+    class Meta:
+        unique_together = (("id_usuario", "fk_provedor"),)
 
-class Providers(models.Model):
-    id_provider = models.AutoField(primary_key=True)
+
+class ProvedoresDeLogin(models.Model):
+    id_provedor = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50, db_index=True)
     key = models.CharField(max_length=500, null=True)
     secret_key = models.CharField(max_length=500, null=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return u"{0}".format(self.nome)
+
+
+class HistoricoNoticiasUsuario(models.Model):
+    id_historico_noticias = models.AutoField(primary_key=True)
+    fk_noticia = models.ForeignKey(Postagens, related_name="fk_noticia_histo_usuario")
+    fk_usuario = models.ForeignKey(User, related_name="fk_usua_histo")
+    data_adicionado = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return u"{0} - {1}".format(self.fk_usuario.username, self.fk_noticia.titulo)
+
+
+class FavoritosNoticiasUsuario(models.Model):
+    id_favoritos_noticias = models.AutoField(primary_key=True)
+    fk_noticia = models.ForeignKey(Postagens, related_name="fk_noticia_fav_usuario")
+    fk_usuario = models.ForeignKey(User, related_name="fk_usua_fav")
+    data_adicionado = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return u"{0} - {1}".format(self.fk_usuario.username, self.fk_noticia.titulo)
+
+
+class ConteudoFavoritos(models.Model):
+    id_conteudo_favoritos = models.OneToOneField(FavoritosNoticiasUsuario, primary_key=True)
+    titulo = models.CharField(max_length=500)
+    conteudo = models.TextField()
+
+    def __str__(self):
+        return u"{0} - {1}".format(self.id_conteudo_favoritos.fk_usuario,
+                                   self.id_conteudo_favoritos.fk_noticia.titulo)
+
+
+class Planos(models.Model):
+    id_plano = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=100)
+    valor = models.DecimalField(max_digits=5, decimal_places=2)
+    data_adicionado = models.DateTimeField(auto_now_add=True)
+    data_modificado = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "{0} - {1}".format(self.nome, self.valor)
+
+
+class Assinatura(models.Model):
+    id_usuario = models.OneToOneField(User, primary_key=True)
+    fk_plano = models.ForeignKey("Planos", related_name="fk_plano_usuario")
+    data_adicionado = models.DateTimeField(auto_now_add=True)
+    data_modificado = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return "{0} - {1}".format(self.nome, self.valor)
