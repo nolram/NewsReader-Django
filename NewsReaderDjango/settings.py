@@ -151,7 +151,6 @@ BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
 #KRONOS_PYTHONPATH = "/home/nolram/Virtualenv/py3_django/bin/python3"
 
 if NO_SERVIDOR:
-    KRONOS_PREFIX = "source /opt/flyn_django/django_virtualenv/bin/activate &&"
     KRONOS_POSTFIX = "> /opt/flyn_django/log_thread.log 2>&1 "
 else:
     KRONOS_PREFIX = "source /home/nolram/Virtualenv/py3_django/bin/activate &&"
