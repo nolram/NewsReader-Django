@@ -36,7 +36,7 @@ NO_SERVIDOR = True
 
 # Application definition
 
-SITE_ID = 1
+SITE_ID = 2
 
 INSTALLED_APPS = (
     'bootstrap_admin',

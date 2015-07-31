@@ -4,7 +4,7 @@ server {
         access_log off;
 
         location /static/ {
-            alias /opt/flyn_django/newsreaderdjango/static/;
+            alias /opt/flyn_django/newsreaderdjango/static_root/;
         }
 
         location / {
