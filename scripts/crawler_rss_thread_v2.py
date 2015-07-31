@@ -18,7 +18,7 @@ from threading import Thread
 from queue import Queue
 from datetime import datetime
 
-CONCURRENT = 25
+CONCURRENT = 10
 
 DEBUG = True
 
