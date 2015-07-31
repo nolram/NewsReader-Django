@@ -1,7 +1,7 @@
 __author__ = 'nolram'
 
 from allauth.socialaccount.providers.facebook.views import FacebookOAuth2Adapter
-from allauth.socialaccount.providers.twitter.views import TwitterOAuthAdapter
+from allauth.socialaccount.providers.twitter.views import TwitterProvider
 from rest_auth.registration.views import SocialLogin
 
 
@@ -10,4 +10,4 @@ class FacebookLogin(SocialLogin):
 
 
 class TwitterLogin(SocialLogin):
-    adapter_class = TwitterOAuthAdapter
+    adapter_class = TwitterProvider
