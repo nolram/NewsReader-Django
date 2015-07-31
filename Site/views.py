@@ -7,8 +7,6 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core import serializers
 from django.http import Http404
 
-from types import MethodType
-
 from Crawler.models import Postagens
 
 def index(request):
