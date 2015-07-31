@@ -14,3 +14,5 @@
 * pip install requests
 * pip install django-haystack
 * pip install python-dateutil
+* pip install pysolr
+* pip install gunicorn
