@@ -16,5 +16,7 @@
 * pip install python-dateutil
 * pip install pysolr
 * pip install gunicorn
+* pip install django-rest-auth
+* pip install django-allauth
 
 gunicorn -c /opt/flyn_django/django_virtualenv/gunicorn_config.py NewsReaderDjango.wsgi
