@@ -1,0 +1,3 @@
+{{ object.titulo }}
+{{ object.horario_postagem_site }}
+{{ object.texto }}

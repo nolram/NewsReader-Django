@@ -63,15 +63,53 @@ def get_last_news(request, numero):
 
     serializedpage = {}
 
-    #wanted = ("end_index", "has_next", "has_other_pages", "has_previous",
-    #        "next_page_number", "number", "start_index", "previous_page_number")
+    pythonserializer = serializers.get_serializer("python")()
+    serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
+                                                               fields=('fk_rss', 'titulo', 'link', 'texto',
+                                                                       'data_adicionado', 'data_modificado',
+                                                                       'horario_postagem_site'))
 
-    #for attr in wanted:
-    #    v = getattr(postagens, attr)
-    #    if isinstance(v, MethodType):
-    #        serializedpage[attr] = v()
-    #    elif isinstance(v, (str, int)):
-    #        serializedpage[attr] = v
+    return JsonResponse(serializedpage)
+
+
+def get_last_news_by_site(request, pagina, id_site):
+    todas_postagens = Postagens.objects.select_related("fk_rss__fk_sites").filter(fk_rss__fk_sites=id_site)\
+        .order_by("-horario_postagem_site")
+
+    paginator = Paginator(todas_postagens, 20)
+
+    try:
+        postagens = paginator.page(pagina)
+    except PageNotAnInteger:
+        postagens = paginator.page(1)
+    except EmptyPage:
+        postagens = paginator.page(paginator.num_pages)
+
+    serializedpage = {}
+
+    pythonserializer = serializers.get_serializer("python")()
+    serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
+                                                               fields=('fk_rss', 'titulo', 'link', 'texto',
+                                                                       'data_adicionado', 'data_modificado',
+                                                                       'horario_postagem_site'))
+
+    return JsonResponse(serializedpage)
+
+
+def get_last_news_by_category(request, pagina, id_site):
+    todas_postagens = Postagens.objects.select_related("fk_rss__fk_sites").filter(fk_rss__fk_sites=id_site)\
+        .order_by("-horario_postagem_site")
+
+    paginator = Paginator(todas_postagens, 20)
+
+    try:
+        postagens = paginator.page(pagina)
+    except PageNotAnInteger:
+        postagens = paginator.page(1)
+    except EmptyPage:
+        postagens = paginator.page(paginator.num_pages)
+
+    serializedpage = {}
 
     pythonserializer = serializers.get_serializer("python")()
     serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
