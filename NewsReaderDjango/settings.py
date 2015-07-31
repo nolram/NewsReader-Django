@@ -32,6 +32,7 @@ USING_SQLITE = False
 
 ALLOWED_HOSTS = []
 
+NO_SERVIDOR = True
 
 # Application definition
 
@@ -149,6 +150,9 @@ BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
 
 #KRONOS_PYTHONPATH = "/home/nolram/Virtualenv/py3_django/bin/python3"
 
-KRONOS_PREFIX = "source /home/nolram/Virtualenv/py3_django/bin/activate &&"
-
-KRONOS_POSTFIX = "> /home/nolram/log_thread.log 2>&1 "
+if NO_SERVIDOR:
+    KRONOS_PREFIX = "source /root/Flyndjango/django/bin &&"
+    KRONOS_POSTFIX = "> /root/Flyndjango/log_thread.log 2>&1 "
+else:
+    KRONOS_PREFIX = "source /home/nolram/Virtualenv/py3_django/bin/activate &&"
+    KRONOS_POSTFIX = "> /home/nolram/log_thread.log 2>&1 "

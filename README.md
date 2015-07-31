@@ -13,3 +13,5 @@
 * pip install haystack
 * pip install psycopg2
 * pip install requests
+* pip install django-haystack
+* pip install python-dateutil
