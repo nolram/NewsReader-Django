@@ -52,26 +52,6 @@ INSTALLED_APPS = (
     'Crawler',
     'sorl.thumbnail',
     'kronos',
-
-    'rest_framework',
-    'rest_framework.authtoken',
-
-    'rest_auth',
-
-    'allauth',
-    'allauth.account',
-    'rest_auth.registration',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.twitter',
-    'allauth.socialaccount.providers.facebook',
-)
-
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
-    # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
 )
 
 MIDDLEWARE_CLASSES = (
