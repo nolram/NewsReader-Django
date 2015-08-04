@@ -19,6 +19,8 @@ urlpatterns = patterns('',
                        url(r'^get_last_news_by_category/(?P<categoria>\w+)/(?P<pagina>[0-9]+)/$',
                            "Site.views.get_last_news_by_category"),
 
+                       url(r'^pesquisa/$', "Site.views.pesquisa_pagina"),
+
                        url(r'^search/', include('haystack.urls')),
 
                        url(r'^login_rest/$', 'Site.views.logar_rest'),

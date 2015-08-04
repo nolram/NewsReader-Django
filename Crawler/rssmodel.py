@@ -37,7 +37,7 @@ MESES = {"Jan": "Jan",
          "Nov": "Nov",
          "Dez": "Dec"}
 
-SALVAR_IMAGEM = False
+SALVAR_IMAGEM = True
 
 
 class RSSModel:

@@ -1,13 +1,16 @@
 # -.- encoding:utf-8 -.-
 from django.contrib.auth.models import User
-from django.http import JsonResponse
-from django.shortcuts import render, redirect
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 from django.http import Http404
+
+from haystack.query import SearchQuerySet
 
 from Crawler.models import Postagens, Categorias
 from Site.models import ProvidersUser, ProvedoresDeLogin
@@ -123,75 +126,105 @@ def get_last_news_by_category(request, categoria, pagina):
 
 @csrf_exempt
 def criar_usuario_rest(request):
-    usuario_criado = {}
-    if request.POST.get("metodo") == "com_senha":
-        user, verifica = User.objects.create_user(username=request.POST.get("email"),
-                                                  email=request.POST.get("email"),
-                                                  password=request.POST.get("senha"))
-        if verifica:
-            usuario_criado["status"] = True
-            usuario_criado["mensagem"] = "Usuário criado com sucesso!"
-        else:
-            usuario_criado = False
-            usuario_criado["mensagem"] = "O usuário já existe."
-    elif request.POST.get("metodo") == "facebook":
-        user, verifica_u = User.objects.create_user(username=request.POST.get("email"),
-                                                    email=request.POST.get("email"))
+    if request.method == "POST":
+        usuario_criado = {}
+        if request.POST.get("metodo") == "com_senha":
+            user, verifica = User.objects.create_user(username=request.POST.get("email"),
+                                                      email=request.POST.get("email"),
+                                                      password=request.POST.get("senha"))
+            if verifica:
+                usuario_criado["status"] = True
+                usuario_criado["mensagem"] = "Usuário criado com sucesso!"
+            else:
+                usuario_criado = False
+                usuario_criado["mensagem"] = "O usuário já existe."
+        elif request.POST.get("metodo") == "facebook":
+            user, verifica_u = User.objects.create_user(username=request.POST.get("email"),
+                                                        email=request.POST.get("email"))
+            try:
+                provider = ProvedoresDeLogin.objects.get(nome="facebook")
+                if verifica_u:
+                    user, verifica_p = ProvidersUser.objects.get_or_create(key_o_auth=request.POST.get("id_facebook"),
+                                                                           defaults={"fk_provedor": provider,
+                                                                                     "fk_usuario": user})
+                    if verifica_p:
+                        usuario_criado["status"] = True
+                        usuario_criado["mensagem"] = "Usuário criado com sucesso!"
+                    else:
+                        usuario_criado = False
+                        usuario_criado["mensagem"] = "O usuário já existe."
+            except ProvedoresDeLogin.DoesNotExist:
+                usuario_criado = False
+                usuario_criado["mensagem"] = "O provedor de login não está cadastrado: facebook"
+
+            else:
+                usuario_criado = False
+                usuario_criado["mensagem"] = "O usuário já existe."
+
+        return JsonResponse(usuario_criado)
+    else:
+        return HttpResponse("Método não suportado")
+
+
+def pesquisa_pagina(request):
+    if request.method == "GET":
+        q = request.GET.get("query")
+        pagina = request.GET.get("page")
+        pesquisa = SearchQuerySet().filter(content=q).order_by('-horario_postagem_site')
+        paginator = Paginator(pesquisa, 20)
+
         try:
-            provider = ProvedoresDeLogin.objects.get(nome="facebook")
-            if verifica_u:
-                user, verifica_p = ProvidersUser.objects.get_or_create(key_o_auth=request.POST.get("id_facebook"),
-                                                                       defaults={"fk_provedor": provider,
-                                                                                 "fk_usuario": user})
-                if verifica_p:
-                    usuario_criado["status"] = True
-                    usuario_criado["mensagem"] = "Usuário criado com sucesso!"
-                else:
-                    usuario_criado = False
-                    usuario_criado["mensagem"] = "O usuário já existe."
-        except ProvedoresDeLogin.DoesNotExist:
-            usuario_criado = False
-            usuario_criado["mensagem"] = "O provedor de login não está cadastrado: facebook"
+            postagens = paginator.page(pagina)
+        except PageNotAnInteger:
+            postagens = paginator.page(1)
+        except EmptyPage:
+            postagens = paginator.page(paginator.num_pages)
 
-        else:
-            usuario_criado = False
-            usuario_criado["mensagem"] = "O usuário já existe."
+        context = {
+            "page": postagens,
+            "paginator": paginator,
+            "query": q
+        }
 
-    return JsonResponse(usuario_criado)
+        return render_to_response("site/search.html", context, context_instance=RequestContext(request))
+
 
 @csrf_exempt
 def logar_rest(request):
-    resposta = {"erro_mensagem": None}
-    metodo = request.POST.get("metodo")
-    if metodo == "com_senha":
-        email = request.POST.get("email")
-        senha = request.POST.get("senha")
-        user = authenticate(username=email, password=senha)
-        if user is not None:
-            if user.is_active:
-                resposta["id_user"] = user.id
-                resposta["email"] = user.email
-                resposta["nome"] = user.name
-                resposta["status"] = True
-                return JsonResponse(resposta)
+    if request.method == "POST":
+        resposta = {"erro_mensagem": None}
+        metodo = request.POST.get("metodo")
+        if metodo == "com_senha":
+            email = request.POST.get("email")
+            senha = request.POST.get("senha")
+            user = authenticate(username=email, password=senha)
+            if user is not None:
+                if user.is_active:
+                    resposta["id_user"] = user.id
+                    resposta["email"] = user.email
+                    resposta["nome"] = user.name
+                    resposta["status"] = True
+                    return JsonResponse(resposta)
+                else:
+                    resposta["status"] = False
+                    resposta["erro"] = "O seu login está desativado, entre em contato com o administrador"
+                    return JsonResponse(resposta)
             else:
                 resposta["status"] = False
-                resposta["erro"] = "O seu login está desativado, entre em contato com o administrador"
+                resposta["erro"] = "O seu login e/ou sua senha estão incorretos"
                 return JsonResponse(resposta)
-        else:
-            resposta["status"] = False
-            resposta["erro"] = "O seu login e/ou sua senha estão incorretos"
-            return JsonResponse(resposta)
-    elif metodo == "facebook":
-        id_facebook = request.POST.get("id_facebook")
-        try:
-            usuario = ProvidersUser.objects.select_related("fk_usuario").get(key_o_auth=id_facebook)
-            resposta["id_user"] = usuario.fk_usuario.id
-            resposta["email"] = usuario.fk_usuario.email
-            resposta["nome"] = usuario.fk_usuario.name
-            resposta["status"] = True
-            return JsonResponse(resposta)
-        except ProvidersUser.DoesNotExist:
-            resposta["status"] = False
-            resposta["erro"] = "O seu usuário não existe. Vá na tela criar conta."
-            return JsonResponse(resposta)
+        elif metodo == "facebook":
+            id_facebook = request.POST.get("id_facebook")
+            try:
+                usuario = ProvidersUser.objects.select_related("fk_usuario").get(key_o_auth=id_facebook)
+                resposta["id_user"] = usuario.fk_usuario.id
+                resposta["email"] = usuario.fk_usuario.email
+                resposta["nome"] = usuario.fk_usuario.name
+                resposta["status"] = True
+                return JsonResponse(resposta)
+            except ProvidersUser.DoesNotExist:
+                resposta["status"] = False
+                resposta["erro"] = "O seu usuário não existe. Vá na tela criar conta."
+                return JsonResponse(resposta)
+    else:
+        return HttpResponse("Método não suportado")

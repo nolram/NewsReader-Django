@@ -77,16 +77,13 @@
     var direita = true;
     var ultimo_dia;
     var loading = false;
-
     Date.prototype.setISO8601 = function (string) {
         var regexp = "([0-9]{4})(-([0-9]{2})(-([0-9]{2})" +
             "(T([0-9]{2}):([0-9]{2})(:([0-9]{2})(\.([0-9]+))?)?" +
             "(Z|(([-+])([0-9]{2}):([0-9]{2})))?)?)?)?";
         var d = string.match(new RegExp(regexp));
-
         var offset = 0;
         var date = new Date(d[1], 0, 1);
-
         if (d[3]) { date.setMonth(d[3] - 1); }
         if (d[5]) { date.setDate(d[5]); }
         if (d[7]) { date.setHours(d[7]); }
@@ -97,13 +94,10 @@
             offset = (Number(d[16]) * 60) + Number(d[17]);
             offset *= ((d[15] == '-') ? 1 : -1);
         }
-
         offset -= date.getTimezoneOffset();
         time = (Number(date) + (offset * 60 * 1000));
         this.setTime(Number(time));
     }
-
-
     function carregar_ultimas_noticias(){
         var endereco = "/get_last_news_by_category/tecnologia/"+contador+"/";
         contador++;
@@ -122,7 +116,6 @@
                     ultimo_dia = data;
                      $(".timeline_g").append("<dt>"+data.getDate()+"/"+mes+"</dt>");
                 }
-
                 if(direita){
                     direita = false;
                     $(".timeline_g").append("<dd class='pos-right clearfix'>"+
