@@ -20,7 +20,7 @@ from queue import Queue
 
 CONCURRENT = 10
 
-DEBUG = True
+DEBUG = False
 
 django.setup()
 
