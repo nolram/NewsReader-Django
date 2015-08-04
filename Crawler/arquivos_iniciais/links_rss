@@ -65,7 +65,7 @@ exame,http://feeds.feedburner.com/EXAME-Marketing,{propaganda & marketing}
 exame,http://feeds.feedburner.com/Exame-Tecnologia,{tecnologia}
 exame,http://feeds.feedburner.com/Exame-Gestao,{administração}
 exame,http://feeds.feedburner.com/Exame-GaleriaCiencia,{ciência:fotografia}
-galileu,http://revistagalileu.globo.com/rss/ultimas/feed.xml,{ciência:notícias:tecnologia}
+galileu,http://revistagalileu.globo.com/rss/ultimas/feed.xml,{ciência:notícias}
 bbc brasil,http://www.bbc.com/portuguese/index.xml,{notícias}
 bbc brasil,http://www.bbc.com/portuguese/topicos/brasil/index.xml,{notícias}
 bbc brasil,http://www.bbc.com/portuguese/topicos/internacional/index.xml,{notícias}

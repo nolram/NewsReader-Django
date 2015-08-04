@@ -32,7 +32,7 @@ USING_SQLITE = False
 
 ALLOWED_HOSTS = []
 
-NO_SERVIDOR = True
+NO_SERVIDOR = False
 
 # Application definition
 
@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'haystack',
+
     'Site',
     'Crawler',
     'sorl.thumbnail',

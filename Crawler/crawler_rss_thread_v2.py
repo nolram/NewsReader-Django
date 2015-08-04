@@ -12,11 +12,11 @@ from requests.exceptions import ConnectionError, TooManyRedirects
 
 from django.db.utils import IntegrityError
 from django.db import close_old_connections
+from django.utils import timezone
 from django.db.models import F
 
 from threading import Thread
 from queue import Queue
-from datetime import datetime
 
 CONCURRENT = 10
 
@@ -35,9 +35,9 @@ def do_crawling(q):
     while True:
         site = q.get()
         try:
+            mensagem = ""
             if DEBUG:
-                mensagem = ""
-                mensagem += "== {0} - Coletando: {1} == \n".format(datetime.now(), site.link_rss)
+                mensagem += "== {0} - Coletando: {1} == \n".format(timezone.now(), site.link_rss)
             coleta = fp.parse(site.link_rss)
             if "entries" in coleta:
                 for col in range(0, len(coleta.entries)):
@@ -48,12 +48,12 @@ def do_crawling(q):
                             try:
                                 link_orig = requests.get(coleta.entries[col].link)
                             except ConnectionError:
-                                if DEBUG:
-                                    mensagem += "ERRO: ConnectionError: {0}".format(coleta.entries[col].link)
+                                mensagem += "{0} - ERRO: ConnectionError: {0}".format(timezone.now(),
+                                                                                      coleta.entries[col].link)
                                 break
                             except TooManyRedirects:
-                                if DEBUG:
-                                    mensagem += "ERRO: TooManyRedirects: {0}".format(coleta.entries[col].link)
+                                mensagem += "{0} - ERRO: TooManyRedirects: {0}".format(timezone.now(),
+                                                                                       coleta.entries[col].link)
                                 break
                             if link_orig.status_code == 200 or link_orig.status_code == 301:
                                 try:
@@ -88,22 +88,21 @@ def do_crawling(q):
                                 except IntegrityError:
                                     pass
                             else:
-                                if DEBUG:
-                                    mensagem += "ERRO: código retornado pelo site: {0}".format(link_orig.status_code)
+                                mensagem += "{0} - ERRO: código retornado pelo site: {0}".format(timezone.now(),
+                                                                                                 link_orig.status_code)
 
                         except Postagens.MultipleObjectsReturned:
-                            if DEBUG:
-                                mensagem += "ERRO: Multiplos objetos Retornados - {0} \n".format(
-                                    coleta.entries[col].link)
+                            mensagem += "{0} - ERRO: Multiplos objetos Retornados - {0} \n".format(
+                                timezone.now(), coleta.entries[col].link)
             else:
-                if DEBUG:
-                    mensagem += "A consulta não retornou resultados \n"
+                mensagem += "A consulta não retornou resultados \n"
 
             if DEBUG:
-                mensagem += "==== {0} - Coleta Concluida - {1} ==== \n".format(datetime.now(), site.link_rss)
+                mensagem += "==== {0} - Coleta Concluida - {1} ==== \n".format(timezone.now(), site.link_rss)
+            if mensagem != "":
                 print(mensagem)
         except Exception:
-            print("Ocorreu um erro no link: {0}".format(site.link_rss))
+            print("{0} - Ocorreu um erro no link: {1}".format(timezone.now(), site.link_rss))
         close_old_connections()
         q.task_done()
 

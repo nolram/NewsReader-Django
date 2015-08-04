@@ -37,6 +37,8 @@ MESES = {"Jan": "Jan",
          "Nov": "Nov",
          "Dez": "Dec"}
 
+SALVAR_IMAGEM = False
+
 
 class RSSModel:
     def __init__(self, dados, link, link_real, fk_rss):
@@ -103,29 +105,22 @@ class RSSModel:
         try:
             image_content = NamedTemporaryFile(delete=True)
             if "img" in dados:
+                imagem_url = None
                 if "src" in dados.img:
                     imagem_url = dados.img["src"]
-                    image_content.write(requests.get(imagem_url).content)
-                    image_content.flush()
-                    self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
-                    self.imagem_banco.save()
                 elif "url" in dados.img:
                     imagem_url = dados.img["url"]
-                    image_content.write(requests.get(imagem_url).content)
-                    image_content.flush()
-                    self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
-                    self.imagem_banco.save()
                 elif "href" in dados.img:
                     imagem_url = dados.img["href"]
+                elif "link" in dados.img:
+                    imagem_url = dados.img["link"]
+                if SALVAR_IMAGEM is True and imagem_url is not None:
                     image_content.write(requests.get(imagem_url).content)
                     image_content.flush()
                     self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
                     self.imagem_banco.save()
-                elif "link" in dados.img:
-                    imagem_url = dados.img["link"]
-                    image_content.write(requests.get(imagem_url).content)
-                    image_content.flush()
-                    self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
+                elif imagem_url is not None:
+                    self.imagem_banco = Imagens(img_link_orig=imagem_url)
                     self.imagem_banco.save()
             elif "media_thumbnail" in dados:
                 tmp_media = []
@@ -137,19 +132,27 @@ class RSSModel:
                     imagem_url = sorted_x[0]["url"]
                 else:
                     imagem_url = dados["media_thumbnail"][0]["url"]
-                image_content.write(requests.get(imagem_url).content)
-                image_content.flush()
-                self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
-                self.imagem_banco.save()
+                if SALVAR_IMAGEM:
+                    image_content.write(requests.get(imagem_url).content)
+                    image_content.flush()
+                    self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
+                    self.imagem_banco.save()
+                else:
+                    self.imagem_banco = Imagens(img_link_orig=imagem_url)
+                    self.imagem_banco.save()
             elif "links" in dados:
                 for li in dados.links:
                     if "type" in li:
                         if li.type.find("image") != -1:
                             imagem_url = li.href
-                            image_content.write(requests.get(imagem_url).content)
-                            image_content.flush()
-                            self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
-                            self.imagem_banco.save()
+                            if SALVAR_IMAGEM:
+                                image_content.write(requests.get(imagem_url).content)
+                                image_content.flush()
+                                self.imagem_banco = Imagens(img_cover=File(image_content), img_link_orig=imagem_url)
+                                self.imagem_banco.save()
+                            else:
+                                self.imagem_banco = Imagens(img_link_orig=imagem_url)
+                                self.imagem_banco.save()
                             break
         except IntegrityError:
             self.imagem_banco = None
@@ -160,13 +163,14 @@ class RSSModel:
 
     def converter_data(self, data):
         # Seg, 27 Jul 2015 12:05:00 -0300
+        # Mon, 03 Ago 2015 15:54:00 -0300
         data_modificada = None
         semana = data[:3]
         mes = data[8:11]
         if mes in MESES:
             data_modificada = data.replace(mes, MESES[mes])
             if semana in SEMANAS:
-                data_modificada = data.replace(semana, SEMANAS[semana])
+                data_modificada = data_modificada.replace(semana, SEMANAS[semana])
             else:
                 print("Semana não encontrada: {0}".format(semana))
                 data_modificada = None

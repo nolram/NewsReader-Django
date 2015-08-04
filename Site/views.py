@@ -1,13 +1,17 @@
 # -.- encoding:utf-8 -.-
+from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 from django.http import Http404
 
-from Crawler.models import Postagens
+from Crawler.models import Postagens, Categorias
+from Site.models import ProvidersUser, ProvedoresDeLogin
+
 
 def index(request):
     if request.user.is_authenticated():
@@ -47,32 +51,10 @@ def logout_view(request):
     logout(request)
     return redirect("/")
 
-def get_last_news(request, numero):
-    todas_postagens = Postagens.objects.all().order_by("-horario_postagem_site")
-
-    paginator = Paginator(todas_postagens, 20)
-
-    try:
-        postagens = paginator.page(numero)
-    except PageNotAnInteger:
-        postagens = paginator.page(1)
-    except EmptyPage:
-        postagens = paginator.page(paginator.num_pages)
-
-    serializedpage = {}
-
-    pythonserializer = serializers.get_serializer("python")()
-    serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
-                                                               fields=('fk_rss', 'titulo', 'link', 'texto',
-                                                                       'data_adicionado', 'data_modificado',
-                                                                       'horario_postagem_site'))
-
-    return JsonResponse(serializedpage)
-
-
-def get_last_news_by_site(request, pagina, id_site):
-    todas_postagens = Postagens.objects.select_related("fk_rss__fk_sites").filter(fk_rss__fk_sites=id_site)\
-        .order_by("-horario_postagem_site")
+@csrf_exempt
+def get_last_news(request, pagina):
+    todas_postagens = Postagens.objects.all().filter(
+        disponivel=True).select_related("fk_rss").filter(fk_rss__disponivel=True).order_by("-horario_postagem_site")
 
     paginator = Paginator(todas_postagens, 20)
 
@@ -90,13 +72,12 @@ def get_last_news_by_site(request, pagina, id_site):
                                                                fields=('fk_rss', 'titulo', 'link', 'texto',
                                                                        'data_adicionado', 'data_modificado',
                                                                        'horario_postagem_site'))
-
     return JsonResponse(serializedpage)
 
-
-def get_last_news_by_category(request, pagina, id_site):
-    todas_postagens = Postagens.objects.select_related("fk_rss__fk_sites").filter(fk_rss__fk_sites=id_site)\
-        .order_by("-horario_postagem_site")
+@csrf_exempt
+def get_last_news_by_site(request, id_site, pagina):
+    todas_postagens = Postagens.objects.select_related("fk_rss__fk_sites").filter(fk_rss__fk_sites=id_site).filter(
+        disponivel=True).select_related("fk_rss").filter(fk_rss__disponivel=True).order_by("-horario_postagem_site")
 
     paginator = Paginator(todas_postagens, 20)
 
@@ -114,5 +95,103 @@ def get_last_news_by_category(request, pagina, id_site):
                                                                fields=('fk_rss', 'titulo', 'link', 'texto',
                                                                        'data_adicionado', 'data_modificado',
                                                                        'horario_postagem_site'))
-
     return JsonResponse(serializedpage)
+
+@csrf_exempt
+def get_last_news_by_category(request, categoria, pagina):
+    categoria_db = Categorias.objects.get(categoria=categoria)
+    todas_postagens = Postagens.objects.select_related("fk_rss").prefetch_related(
+        "fk_rss__categorias").filter(fk_rss__categorias__categoria=categoria_db).order_by("-horario_postagem_site")
+
+    paginator = Paginator(todas_postagens, 20)
+
+    try:
+        postagens = paginator.page(pagina)
+    except PageNotAnInteger:
+        postagens = paginator.page(1)
+    except EmptyPage:
+        postagens = paginator.page(paginator.num_pages)
+
+    serializedpage = {}
+
+    pythonserializer = serializers.get_serializer("python")()
+    serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
+                                                               fields=('fk_rss', 'titulo', 'link', 'texto',
+                                                                       'data_adicionado', 'data_modificado',
+                                                                       'horario_postagem_site'))
+    return JsonResponse(serializedpage)
+
+@csrf_exempt
+def criar_usuario_rest(request):
+    usuario_criado = {}
+    if request.POST.get("metodo") == "com_senha":
+        user, verifica = User.objects.create_user(username=request.POST.get("email"),
+                                                  email=request.POST.get("email"),
+                                                  password=request.POST.get("senha"))
+        if verifica:
+            usuario_criado["status"] = True
+            usuario_criado["mensagem"] = "Usuário criado com sucesso!"
+        else:
+            usuario_criado = False
+            usuario_criado["mensagem"] = "O usuário já existe."
+    elif request.POST.get("metodo") == "facebook":
+        user, verifica_u = User.objects.create_user(username=request.POST.get("email"),
+                                                    email=request.POST.get("email"))
+        try:
+            provider = ProvedoresDeLogin.objects.get(nome="facebook")
+            if verifica_u:
+                user, verifica_p = ProvidersUser.objects.get_or_create(key_o_auth=request.POST.get("id_facebook"),
+                                                                       defaults={"fk_provedor": provider,
+                                                                                 "fk_usuario": user})
+                if verifica_p:
+                    usuario_criado["status"] = True
+                    usuario_criado["mensagem"] = "Usuário criado com sucesso!"
+                else:
+                    usuario_criado = False
+                    usuario_criado["mensagem"] = "O usuário já existe."
+        except ProvedoresDeLogin.DoesNotExist:
+            usuario_criado = False
+            usuario_criado["mensagem"] = "O provedor de login não está cadastrado: facebook"
+
+        else:
+            usuario_criado = False
+            usuario_criado["mensagem"] = "O usuário já existe."
+
+    return JsonResponse(usuario_criado)
+
+@csrf_exempt
+def logar_rest(request):
+    resposta = {"erro_mensagem": None}
+    metodo = request.POST.get("metodo")
+    if metodo == "com_senha":
+        email = request.POST.get("email")
+        senha = request.POST.get("senha")
+        user = authenticate(username=email, password=senha)
+        if user is not None:
+            if user.is_active:
+                resposta["id_user"] = user.id
+                resposta["email"] = user.email
+                resposta["nome"] = user.name
+                resposta["status"] = True
+                return JsonResponse(resposta)
+            else:
+                resposta["status"] = False
+                resposta["erro"] = "O seu login está desativado, entre em contato com o administrador"
+                return JsonResponse(resposta)
+        else:
+            resposta["status"] = False
+            resposta["erro"] = "O seu login e/ou sua senha estão incorretos"
+            return JsonResponse(resposta)
+    elif metodo == "facebook":
+        id_facebook = request.POST.get("id_facebook")
+        try:
+            usuario = ProvidersUser.objects.select_related("fk_usuario").get(key_o_auth=id_facebook)
+            resposta["id_user"] = usuario.fk_usuario.id
+            resposta["email"] = usuario.fk_usuario.email
+            resposta["nome"] = usuario.fk_usuario.name
+            resposta["status"] = True
+            return JsonResponse(resposta)
+        except ProvidersUser.DoesNotExist:
+            resposta["status"] = False
+            resposta["erro"] = "O seu usuário não existe. Vá na tela criar conta."
+            return JsonResponse(resposta)

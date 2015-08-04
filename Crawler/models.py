@@ -17,20 +17,10 @@ class Sites(models.Model):
     data_adicionado = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
 
+    categorias = models.ManyToManyField("Categorias", related_name="sites_categorias")
+
     def __str__(self):
         return "{0} - {1}".format(self.titulo, self.link)
-
-
-class SitesCategorias(models.Model):
-    id_sites_categorias = models.AutoField(primary_key=True)
-    fk_site = models.ForeignKey("Sites", related_name="fk_site")
-    fk_categoria = models.ForeignKey("Categorias", related_name="fk_categoria")
-
-    class Meta:
-        unique_together = (("fk_site", "fk_categoria"),)
-
-    def __str__(self):
-        return "{0} - {1}".format(self.fk_site.titulo, self.fk_categoria.categoria)
 
 
 class LinksRSS(models.Model):
@@ -42,20 +32,12 @@ class LinksRSS(models.Model):
     data_adicionado = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
 
+    disponivel = models.BooleanField(default=True)
+
+    categorias = models.ManyToManyField("Categorias", related_name="rss_categorias")
+
     def __str__(self):
         return "{0} - {1}".format(self.fk_sites.titulo, self.link_rss)
-
-
-class RSSCategorias(models.Model):
-    id_rss_categorias = models.AutoField(primary_key=True)
-    fk_rss = models.ForeignKey("LinksRSS", related_name="fk_rss")
-    fk_categoria = models.ForeignKey("Categorias", related_name="fk_categoria_rss")
-
-    class Meta:
-        unique_together = (("fk_rss", "fk_categoria"),)
-
-    def __str__(self):
-        return "{0} - {1}".format(self.fk_site.titulo, self.fk_categoria.categoria)
 
 
 class Postagens(models.Model):
@@ -74,8 +56,10 @@ class Postagens(models.Model):
 
     horario_postagem_site = models.DateTimeField(null=True)
 
+    disponivel = models.BooleanField(default=True)
+
     def __str__(self):
-        return "{0} - {1}".format(self.fk_site.titulo, self.titulo)
+        return "{0} - {1}".format(self.fk_rss.fk_sites.titulo, self.titulo)
 
 
 class Imagens(models.Model):

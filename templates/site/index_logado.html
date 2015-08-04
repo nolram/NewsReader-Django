@@ -105,14 +105,14 @@
 
 
     function carregar_ultimas_noticias(){
-        var endereco = "/last_news/"+contador+"/";
+        var endereco = "/get_last_news_by_category/tecnologia/"+contador+"/";
         contador++;
         $.getJSON(endereco, function(data){
             var postagem = data.object_list;
             $.each(postagem, function(i, post){
                 var titulo = post.fields.titulo;
                 var texto = post.fields.texto.substring(0, 300);
-                var data = new Date(post.fields.data_adicionado);
+                var data = new Date(post.fields.horario_postagem_site);
                 var mes = data.getMonth() + 1;
                 if(contador == 2 && i == 0){
                     ultimo_dia = new Date(post.fields.data_adicionado);
@@ -130,7 +130,7 @@
 						  "<div class='time'>"+data.getDate()+"/"+mes+"-"+data.getHours()+":"+data.getMinutes()+"</div>"+
 						  "<div class='events'>"+
 							  "<div class='events-body'>"+
-								  "<h4 class='events-heading'><a href='/postagem/"+post.pk+"/'>"+titulo+"</a></h4>"+
+								  "<h4 class='events-heading'><a href='/post/"+post.pk+"/'>"+titulo+"</a></h4>"+
 								  "<p>"+texto+"</p>"+
 							  "</div>"+
 						  "</div>"+
@@ -142,7 +142,7 @@
 						  "<div class='time'>"+data.getDate()+"/"+mes+"-"+data.getHours()+":"+data.getMinutes()+"</div>"+
 						  "<div class='events'>"+
 							  "<div class='events-body'>"+
-								  "<h4 class='events-heading'><a href='/postagem/"+post.pk+"/'>"+titulo+"</a></h4>"+
+								  "<h4 class='events-heading'><a href='/post/"+post.pk+"/'>"+titulo+"</a></h4>"+
 								  "<p>"+texto+"</p>"+
 							  "</div>"+
 						  "</div>"+

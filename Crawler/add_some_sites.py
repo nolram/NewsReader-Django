@@ -3,7 +3,7 @@ __author__ = '@nolram'
 import os
 import django
 
-from Crawler.models import Sites, Categorias, RSSCategorias, LinksRSS
+from Crawler.models import Sites, Categorias, LinksRSS
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -47,7 +47,6 @@ class PrimeiraAdicao:
                 cat_rss = rss[2].replace("{", "").replace("}", "").split(":")
                 for c in cat_rss:
                     if c in self.cat_dict:
-                        ob_rss_cat = RSSCategorias(fk_rss=rss_pagina,fk_categoria=self.cat_dict[c])
-                        ob_rss_cat.save()
+                        ob_rss_cat = rss_pagina.categorias.add(self.cat_dict[c])
 
         print("Término do algoritmo...")
