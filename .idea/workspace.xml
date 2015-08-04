@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py" afterPath="$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/settings.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
     </list>
     <ignored path="NewsReaderDjango.iws" />
@@ -53,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.3802817">
+              <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
               <folding>
                 <element signature="e#327#336#0" expanded="true" />
               </folding>
@@ -77,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawler_rss_thread_v2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crawler_rss_thread_v2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15845071">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
@@ -163,8 +162,8 @@
         <option value="$PROJECT_DIR$/Crawler/models.py" />
         <option value="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" />
         <option value="$PROJECT_DIR$/Site/views.py" />
-        <option value="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
         <option value="$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py" />
+        <option value="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
       </list>
     </option>
   </component>
@@ -997,24 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="18" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="18" />
-          <folding>
-            <element signature="e#327#336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1027,9 +1008,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15845071">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3802817">
+          <caret line="105" column="30" selection-start-line="105" selection-start-column="30" selection-end-line="105" selection-end-column="30" />
+          <folding>
+            <element signature="e#327#336#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

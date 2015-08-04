@@ -103,7 +103,7 @@ TIMEOUT = 10000
 
 LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = 'UTC-3'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
