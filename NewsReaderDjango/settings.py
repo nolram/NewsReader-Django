@@ -32,7 +32,7 @@ USING_SQLITE = False
 
 ALLOWED_HOSTS = []
 
-NO_SERVIDOR = False
+NO_SERVIDOR = True
 
 # Application definition
 
