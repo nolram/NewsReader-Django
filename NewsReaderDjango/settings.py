@@ -13,14 +13,8 @@ import os
 from django.conf import global_settings
 from datetime import timedelta
 
-from celery import Celery
-
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ENV_PATH = os.path.abspath(os.path.dirname(__file__))
-
-app = Celery('celery_haystack')
-app.config_from_object('django.conf:settings')
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
