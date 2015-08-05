@@ -12,8 +12,9 @@ from django.http import Http404
 
 from haystack.query import SearchQuerySet
 
-from Crawler.models import Postagens, Categorias
-from Site.models import ProvidersUser, ProvedoresDeLogin
+from Crawler.models import Postagens, Categorias, Tags, TagsPostagens
+from Site.forms import PesquisaForms
+from Site.models import ProvidersUser, ProvedoresDeLogin, TokenLogin
 
 
 def index(request):
@@ -53,6 +54,43 @@ def pag_postagem(request, id_postagem):
 def logout_view(request):
     logout(request)
     return redirect("/")
+
+def pesquisa_pagina(request):
+    if request.method == "GET":
+        form = PesquisaForms(request.GET)
+        if form.is_valid():
+            q = form.cleaned_data["query"]
+            pagina = form.cleaned_data["page"]
+
+            if q[0] == "#":
+                pesquisa = TagsPostagens.objects.select_related("fk_tag").filter(fk_tag__tag=q[1:].lower())\
+                    .select_related("fk_postagem")
+                paginator = Paginator(pesquisa, 20)
+                tag = True
+            else:
+                pesquisa = SearchQuerySet().filter(content=q).order_by('-horario_postagem_site')
+                paginator = Paginator(pesquisa, 20)
+                tag = False
+
+            try:
+                postagens = paginator.page(pagina)
+            except PageNotAnInteger:
+                postagens = paginator.page(1)
+            except EmptyPage:
+                postagens = paginator.page(paginator.num_pages)
+
+            context = {
+                "tag": tag,
+                "page": postagens,
+                "paginator": paginator,
+                "query": q
+            }
+        else:
+            context = {
+                "erro": "Query Inválida!!!"
+            }
+
+        return render_to_response("site/search.html", context, context_instance=RequestContext(request))
 
 @csrf_exempt
 def get_last_news(request, pagina):
@@ -156,43 +194,17 @@ def criar_usuario_rest(request):
             except ProvedoresDeLogin.DoesNotExist:
                 usuario_criado = False
                 usuario_criado["mensagem"] = "O provedor de login não está cadastrado: facebook"
-
             else:
                 usuario_criado = False
                 usuario_criado["mensagem"] = "O usuário já existe."
-
         return JsonResponse(usuario_criado)
     else:
         return HttpResponse("Método não suportado")
 
-
-def pesquisa_pagina(request):
-    if request.method == "GET":
-        q = request.GET.get("query")
-        pagina = request.GET.get("page")
-        pesquisa = SearchQuerySet().filter(content=q).order_by('-horario_postagem_site')
-        paginator = Paginator(pesquisa, 20)
-
-        try:
-            postagens = paginator.page(pagina)
-        except PageNotAnInteger:
-            postagens = paginator.page(1)
-        except EmptyPage:
-            postagens = paginator.page(paginator.num_pages)
-
-        context = {
-            "page": postagens,
-            "paginator": paginator,
-            "query": q
-        }
-
-        return render_to_response("site/search.html", context, context_instance=RequestContext(request))
-
-
 @csrf_exempt
 def logar_rest(request):
     if request.method == "POST":
-        resposta = {"erro_mensagem": None}
+        resposta = {"dados": None, "erro": None}
         metodo = request.POST.get("metodo")
         if metodo == "com_senha":
             email = request.POST.get("email")
@@ -200,9 +212,15 @@ def logar_rest(request):
             user = authenticate(username=email, password=senha)
             if user is not None:
                 if user.is_active:
-                    resposta["id_user"] = user.id
-                    resposta["email"] = user.email
-                    resposta["nome"] = user.name
+                    token = TokenLogin(fk_usuario=user)
+                    token.save()
+                    dados = {
+                        "id_user": user.id,
+                        "email": user.email,
+                        "nome": user.name,
+                        "token": token.id_token,
+                    }
+                    resposta["dados"] = dados
                     resposta["status"] = True
                     return JsonResponse(resposta)
                 else:
@@ -217,9 +235,15 @@ def logar_rest(request):
             id_facebook = request.POST.get("id_facebook")
             try:
                 usuario = ProvidersUser.objects.select_related("fk_usuario").get(key_o_auth=id_facebook)
-                resposta["id_user"] = usuario.fk_usuario.id
-                resposta["email"] = usuario.fk_usuario.email
-                resposta["nome"] = usuario.fk_usuario.name
+                token = TokenLogin(fk_usuario=usuario.fk_usuario)
+                token.save()
+                dados = {
+                    "id_user": usuario.fk_usuario.id,
+                    "email": usuario.fk_usuario.email,
+                    "nome": usuario.fk_usuario.name,
+                    "token": token.id_token,
+                }
+                resposta["id_user"] = dados
                 resposta["status"] = True
                 return JsonResponse(resposta)
             except ProvidersUser.DoesNotExist:

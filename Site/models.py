@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.contrib.auth.models import User
 from Crawler.models import Postagens
@@ -24,6 +26,12 @@ class ProvedoresDeLogin(models.Model):
 
     def __str__(self):
         return u"{0}".format(self.nome)
+
+
+class TokenLogin(models.Model):
+    id_token = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    fk_usuario = models.ForeignKey(User)
+    data_login = models.DateTimeField(auto_now_add=True)
 
 
 class HistoricoNoticiasUsuario(models.Model):

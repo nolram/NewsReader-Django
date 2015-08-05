@@ -3,9 +3,9 @@ __author__ = 'nolram'
 import datetime
 from haystack import indexes
 from Crawler.models import Postagens
+from celery_haystack.indexes import CelerySearchIndex
 
-
-class NoteIndex(indexes.SearchIndex, indexes.Indexable):
+class NoteIndex(CelerySearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     texto = indexes.CharField(model_attr='texto')
     horario_postagem_site = indexes.DateTimeField(model_attr='horario_postagem_site')

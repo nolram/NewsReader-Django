@@ -13,8 +13,13 @@ import os
 from django.conf import global_settings
 from datetime import timedelta
 
+from celery import Celery
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ENV_PATH = os.path.abspath(os.path.dirname(__file__))
+
+app = Celery('celery_haystack')
+app.config_from_object('django.conf:settings')
 
 
 # Quick-start development settings - unsuitable for production
@@ -34,10 +39,6 @@ ALLOWED_HOSTS = []
 
 NO_SERVIDOR = True
 
-# Application definition
-
-SITE_ID = 2
-
 INSTALLED_APPS = (
     'bootstrap_admin',
     'django.contrib.admin',
@@ -48,12 +49,22 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'haystack',
+    'celery_haystack',
+    'djcelery',
 
     'Site',
     'Crawler',
     'sorl.thumbnail',
     'kronos',
 )
+
+HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
+
+BROKER_TRANSPORT = "memory"
+CELERY_ALWAYS_EAGER = True
+CELERY_IGNORE_RESULT = True
+CELERYD_LOG_LEVEL = "DEBUG"
+CELERY_DEFAULT_QUEUE = "celery-haystack"
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
