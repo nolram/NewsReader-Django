@@ -110,12 +110,11 @@ def get_last_news(request, pagina):
 
     pythonserializer = serializers.get_serializer("python")()
     serializedpage["object_list"] = pythonserializer.serialize(postagens.object_list,
+                                                               fields=('fk_rss', 'titulo', 'link', 'texto',
+                                                                       'data_adicionado', 'data_modificado',
+                                                                       'horario_postagem_site', 'fk_imagem'),
                                                                use_natural_foreign_keys=True,
                                                                use_natural_primary_keys=True)
-    #                                                           fields=('fk_rss', 'titulo', 'link', 'texto',
-    #                                                                   'data_adicionado', 'data_modificado',
-    #                                                                   'horario_postagem_site', 'fk_imagem',
-    #                                                                   'fk_rss_fk_sites_titulo')
     return JsonResponse(serializedpage)
 
 @csrf_exempt
