@@ -37,7 +37,7 @@ USING_SQLITE = False
 
 ALLOWED_HOSTS = []
 
-NO_SERVIDOR = False
+NO_SERVIDOR = True
 
 INSTALLED_APPS = (
     'bootstrap_admin',

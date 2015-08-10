@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 
 class Sites(models.Model):
+
     id_sites = models.AutoField(primary_key=True)
 
     titulo = models.CharField(max_length=150, db_index=True)
@@ -18,6 +19,9 @@ class Sites(models.Model):
     data_modificado = models.DateTimeField(auto_now=True)
 
     categorias = models.ManyToManyField("Categorias", related_name="sites_categorias")
+
+    def natural_key(self):
+        return self.titulo, self.link
 
     def __str__(self):
         return "{0} - {1}".format(self.titulo, self.link)
@@ -35,6 +39,9 @@ class LinksRSS(models.Model):
     disponivel = models.BooleanField(default=True)
 
     categorias = models.ManyToManyField("Categorias", related_name="rss_categorias")
+
+    def natural_key(self):
+        return self.link_rss, self.fk_sites.titulo
 
     def __str__(self):
         return "{0} - {1}".format(self.fk_sites.titulo, self.link_rss)
@@ -68,6 +75,9 @@ class Imagens(models.Model):
     data_inserido = models.DateTimeField(auto_now_add=True)
     data_modificado = models.DateTimeField(auto_now=True)
     img_link_orig = models.URLField(max_length=700, db_index=True, unique=True)
+
+    def natural_key(self):
+        return self.img_link_orig, self.id_imagem
 
     def __str__(self):
         return "{0}".format(self.img_link_orig)
