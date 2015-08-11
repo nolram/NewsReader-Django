@@ -94,8 +94,13 @@ def pesquisa_pagina(request):
 
 @csrf_exempt
 def get_last_news(request, pagina):
-    todas_postagens = Postagens.objects.all().filter(disponivel=True).select_related("fk_rss").\
-        select_related("fk_rss__fk_sites").filter(fk_rss__disponivel=True).order_by("-horario_postagem_site")
+    categoria_db = Categorias.objects.get(categoria="notícias")
+    #todas_postagens = Postagens.objects.all().filter(disponivel=True).select_related("fk_rss").\
+    #    select_related("fk_rss__fk_sites").filter(fk_rss__disponivel=True).order_by("-horario_postagem_site")
+
+    todas_postagens = Postagens.objects.select_related("fk_rss").filter(disponivel=True).filter(
+        fk_rss__disponivel=True).prefetch_related("fk_rss__categorias").filter(
+        fk_rss__categorias__categoria=categoria_db).order_by("-horario_postagem_site")
 
     paginator = Paginator(todas_postagens, 20)
 
