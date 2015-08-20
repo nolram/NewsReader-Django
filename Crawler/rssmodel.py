@@ -50,7 +50,7 @@ class RSSModel:
         self.imagem_banco = None
         self.data_publicacao = None
         self.tags = []
-        self.cleaner = Cleaner(allow_tags=['p', 'div'], kill_tags=["img"], remove_unknown_tags=False)
+        self.cleaner = Cleaner(kill_tags=['script', 'style'], remove_unknown_tags=True)
         self.converter(dados)
 
     def converter(self, dados):
