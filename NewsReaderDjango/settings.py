@@ -37,7 +37,7 @@ USING_SQLITE = False
 
 ALLOWED_HOSTS = []
 
-NO_SERVIDOR = True
+NO_SERVIDOR = False
 
 INSTALLED_APPS = (
     'bootstrap_admin',
@@ -48,9 +48,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'haystack',
-    'celery_haystack',
-    'djcelery',
+    #'haystack',
+    #'celery_haystack',
+    #'djcelery',
 
     'Site',
     'Crawler',
@@ -58,13 +58,13 @@ INSTALLED_APPS = (
     'kronos',
 )
 
-HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
+#HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
 
-BROKER_TRANSPORT = "memory"
-CELERY_ALWAYS_EAGER = True
-CELERY_IGNORE_RESULT = True
-CELERYD_LOG_LEVEL = "DEBUG"
-CELERY_DEFAULT_QUEUE = "celery-haystack"
+#BROKER_TRANSPORT = "memory"
+#CELERY_ALWAYS_EAGER = True
+#CELERY_IGNORE_RESULT = True
+#CELERYD_LOG_LEVEL = "DEBUG"
+#CELERY_DEFAULT_QUEUE = "celery-haystack"
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -76,13 +76,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
-        'INDEX_NAME': 'haystack',
-    },
-}
+#HAYSTACK_CONNECTIONS = {
+#    'default': {
+#        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+#        'URL': 'http://127.0.0.1:9200/',
+#        'INDEX_NAME': 'haystack',
+#    },
+#}
 
 ROOT_URLCONF = 'NewsReaderDjango.urls'
 

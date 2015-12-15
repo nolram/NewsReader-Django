@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/rssmodel.py" afterPath="$PROJECT_DIR$/Crawler/rssmodel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/crawler.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/simple.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/watercooler.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NewsReaderDjango.iml" afterPath="$PROJECT_DIR$/.idea/NewsReaderDjango.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawler/add_some_sites.py" afterPath="$PROJECT_DIR$/Crawler/add_some_sites.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/site/index_logado.html" afterPath="$PROJECT_DIR$/templates/site/index_logado.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/settings.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewsReaderDjango/urls.py" afterPath="$PROJECT_DIR$/NewsReaderDjango/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Site/views.py" afterPath="$PROJECT_DIR$/Site/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NewsReaderDjango.iws" />
@@ -43,71 +53,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="146" column="48" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="48" />
-              <folding>
-                <element signature="e#327#336#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Site/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="31" />
-              <folding>
-                <element signature="e#25#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawler/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="crawler_rss_thread_v2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rssmodel.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
+      <file leaf-file-name="watercooler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tornado/watercooler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33450705">
-              <caret line="52" column="87" selection-start-line="52" selection-start-column="87" selection-end-line="52" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.41584158">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
               <folding>
-                <element signature="e#23#34#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="links_rss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss">
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5294118">
-              <caret line="26" column="48" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="48" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,40 +79,30 @@
         <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="54" />
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Site/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <element signature="e#25#68#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/modelos/model.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index_logado.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,11 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cron_job.sh" />
-        <option value="$PROJECT_DIR$/Crawler/arquivos_iniciais/categorias.txt" />
-        <option value="$PROJECT_DIR$/cron_tasks.py" />
-        <option value="$PROJECT_DIR$/result.txt" />
-        <option value="$PROJECT_DIR$/static/css/index_logado.css" />
         <option value="$PROJECT_DIR$/templates/postagem.html" />
         <option value="$PROJECT_DIR$/Scripts/teste_tasks_coleta_thread.py" />
         <option value="$PROJECT_DIR$/Scripts/rssmodel_w_nltk.py" />
@@ -205,11 +153,9 @@
         <option value="$PROJECT_DIR$/Site/admin.py" />
         <option value="$PROJECT_DIR$/Site/serializers.py" />
         <option value="$PROJECT_DIR$/Site/urls.py" />
-        <option value="$PROJECT_DIR$/Crawler/add_some_sites.py" />
         <option value="$PROJECT_DIR$/Crawler/admin.py" />
         <option value="$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss" />
         <option value="$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py" />
-        <option value="$PROJECT_DIR$/NewsReaderDjango/urls.py" />
         <option value="$PROJECT_DIR$/Site/forms.py" />
         <option value="$PROJECT_DIR$/templates/modelos/barra_navegacao.html" />
         <option value="$PROJECT_DIR$/templates/site/search.html" />
@@ -217,11 +163,18 @@
         <option value="$PROJECT_DIR$/Crawler/search_indexes.py" />
         <option value="$PROJECT_DIR$/celery_haystack_mod.py" />
         <option value="$PROJECT_DIR$/NewsReaderDjango/celery.py" />
-        <option value="$PROJECT_DIR$/templates/site/index_logado.html" />
         <option value="$PROJECT_DIR$/Crawler/models.py" />
-        <option value="$PROJECT_DIR$/Site/views.py" />
-        <option value="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
         <option value="$PROJECT_DIR$/Crawler/rssmodel.py" />
+        <option value="$PROJECT_DIR$/watercooler.py" />
+        <option value="$PROJECT_DIR$/CrawlerTornado/crawler.py" />
+        <option value="$PROJECT_DIR$/CrawlerTornado/watercooler.py" />
+        <option value="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
+        <option value="$PROJECT_DIR$/templates/site/index_logado.html" />
+        <option value="$PROJECT_DIR$/NewsReaderDjango/urls.py" />
+        <option value="$PROJECT_DIR$/Site/views.py" />
+        <option value="$PROJECT_DIR$/Crawler/add_some_sites.py" />
+        <option value="$PROJECT_DIR$/Tornado/simple.py" />
+        <option value="$PROJECT_DIR$/Tornado/watercooler.py" />
       </list>
     </option>
   </component>
@@ -276,6 +229,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -291,7 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NewsReaderDjango" />
+              <option name="myItemId" value="newsreaderdjango" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,35 +255,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NewsReaderDjango" />
+              <option name="myItemId" value="newsreaderdjango" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsReaderDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NewsReaderDjango" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="arquivos_iniciais" />
+              <option name="myItemId" value="Tornado" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,7 +274,7 @@
     <property name="options.lastSelected" value="Errors" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../studo" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Virtualenv/Python3/bin/python3" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="dynamic.classpath" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -370,25 +305,14 @@
       <recent name="$PROJECT_DIR$/static/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CrawlerTornado" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/Crawler" />
       <recent name="$PROJECT_DIR$/templates/site" />
       <recent name="$PROJECT_DIR$/Scripts" />
-      <recent name="$PROJECT_DIR$/Scripts/análises" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.NewsReaderDjango">
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -641,12 +565,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2781155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2774524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917318" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280757" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -684,6 +608,67 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Crawler/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/modelos/model.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Crawler/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -712,41 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12676056">
-          <caret line="5" column="69" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64044946">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/flyn_nginx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19014084">
           <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/rest_auth/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6126761">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/rest_auth/registration/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46126762">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -764,59 +718,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/rest_framework/authtoken/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/rest_framework/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/rest_framework/authtoken/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15845071">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/django/contrib/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14260563">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/rest_framework/fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2535211">
-          <caret line="8" column="63" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.846831">
-          <caret line="727" column="8" selection-start-line="727" selection-start-column="8" selection-end-line="727" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/management/commands/coletar_rss.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03169014">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -831,13 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13432837">
           <caret line="4" column="27" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/add_some_sites.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71478873">
-          <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -869,34 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/haystack/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274648">
-          <caret line="25" column="119" selection-start-line="25" selection-start-column="105" selection-end-line="25" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/haystack/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/haystack/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274648">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Virtualenv/py3_django/lib/python3.4/site-packages/django/forms/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274648">
-          <caret line="421" column="21" selection-start-line="421" selection-start-column="21" selection-end-line="421" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Site/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19014084">
@@ -908,13 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4177449">
           <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/celery_haystack_mod.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -953,14 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="34" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/celery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5387324">
@@ -986,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,37 +848,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Site/views.py">
+    <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#25#68#0" expanded="true" />
-          </folding>
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
+    <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="48" selection-start-line="146" selection-start-column="12" selection-end-line="146" selection-end-column="48" />
-          <folding>
-            <element signature="e#327#336#0" expanded="true" />
-          </folding>
+          <caret line="60" column="86" selection-start-line="60" selection-start-column="86" selection-end-line="60" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -1036,13 +876,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/arquivos_iniciais/links_rss">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Tornado/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5294118">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.05940594">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1050,17 +895,101 @@
     <entry file="file://$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="71" selection-start-line="45" selection-start-column="71" selection-end-line="45" selection-end-column="71" />
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawler/rssmodel.py">
+    <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33450705">
-          <caret line="52" column="87" selection-start-line="52" selection-start-column="87" selection-end-line="52" selection-end-column="87" />
+        <state vertical-scroll-proportion="-4.0740743">
+          <caret line="101" column="45" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewsReaderDjango/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5916955">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11881188">
+          <caret line="5" column="69" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/celery_haystack_mod.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.089108914">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/add_some_sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7920792">
+          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/management/commands/first_add.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14851485">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Site/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
           <folding>
-            <element signature="e#23#34#0" expanded="true" />
+            <element signature="e#25#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawler/management/commands/coletar_rss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/simple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38613862">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/watercooler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41584158">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>

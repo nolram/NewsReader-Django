@@ -99,7 +99,7 @@
         this.setTime(Number(time));
     }
     function carregar_ultimas_noticias(){
-        var endereco = "/last_news/"+contador+"/";
+        var endereco = "/last_news/"+contador;
         contador++;
         $.getJSON(endereco, function(data){
             var postagem = data.object_list;

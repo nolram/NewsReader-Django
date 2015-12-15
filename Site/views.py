@@ -10,7 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core import serializers
 from django.http import Http404
 
-from haystack.query import SearchQuerySet
+#from haystack.query import SearchQuerySet
 
 from Crawler.models import Postagens, Categorias, Tags, TagsPostagens
 from Site.forms import PesquisaForms
@@ -22,6 +22,7 @@ def index(request):
         return render(request, "site/index_logado.html", {"usuario": request.user})
     else:
         return render(request, "index.html")
+
 
 def pag_login(request):
     erros = {}
@@ -41,6 +42,7 @@ def pag_login(request):
 
     return render(request, "login.html", erros)
 
+
 @login_required
 def pag_postagem(request, id_postagem):
     try:
@@ -51,46 +53,48 @@ def pag_postagem(request, id_postagem):
     dic_pos = {"postagem": postagem, "usuario": request.user}
     return render(request, "site/postagem.html", dic_pos)
 
+
 def logout_view(request):
     logout(request)
     return redirect("/")
 
-def pesquisa_pagina(request):
-    if request.method == "GET":
-        form = PesquisaForms(request.GET)
-        if form.is_valid():
-            q = form.cleaned_data["query"]
-            pagina = form.cleaned_data["page"]
+# def pesquisa_pagina(request):
+#     if request.method == "GET":
+#         form = PesquisaForms(request.GET)
+#         if form.is_valid():
+#             q = form.cleaned_data["query"]
+#             pagina = form.cleaned_data["page"]
+#
+#             if q[0] == "#":
+#                 pesquisa = TagsPostagens.objects.select_related("fk_tag").filter(fk_tag__tag=q[1:].lower())\
+#                     .select_related("fk_postagem")
+#                 paginator = Paginator(pesquisa, 20)
+#                 tag = True
+#             else:
+#                 pesquisa = SearchQuerySet().filter(content=q).order_by('-horario_postagem_site')
+#                 paginator = Paginator(pesquisa, 20)
+#                 tag = False
+#
+#             try:
+#                 postagens = paginator.page(pagina)
+#             except PageNotAnInteger:
+#                 postagens = paginator.page(1)
+#             except EmptyPage:
+#                 postagens = paginator.page(paginator.num_pages)
+#
+#             context = {
+#                 "tag": tag,
+#                 "page": postagens,
+#                 "paginator": paginator,
+#                 "query": q
+#             }
+#         else:
+#             context = {
+#                 "erro": "Query Inválida!!!"
+#             }
+#
+#         return render_to_response("site/search.html", context, context_instance=RequestContext(request))
 
-            if q[0] == "#":
-                pesquisa = TagsPostagens.objects.select_related("fk_tag").filter(fk_tag__tag=q[1:].lower())\
-                    .select_related("fk_postagem")
-                paginator = Paginator(pesquisa, 20)
-                tag = True
-            else:
-                pesquisa = SearchQuerySet().filter(content=q).order_by('-horario_postagem_site')
-                paginator = Paginator(pesquisa, 20)
-                tag = False
-
-            try:
-                postagens = paginator.page(pagina)
-            except PageNotAnInteger:
-                postagens = paginator.page(1)
-            except EmptyPage:
-                postagens = paginator.page(paginator.num_pages)
-
-            context = {
-                "tag": tag,
-                "page": postagens,
-                "paginator": paginator,
-                "query": q
-            }
-        else:
-            context = {
-                "erro": "Query Inválida!!!"
-            }
-
-        return render_to_response("site/search.html", context, context_instance=RequestContext(request))
 
 @csrf_exempt
 def get_last_news(request, pagina):
@@ -122,6 +126,7 @@ def get_last_news(request, pagina):
                                                                use_natural_primary_keys=True)
     return JsonResponse(serializedpage)
 
+
 @csrf_exempt
 def get_last_news_by_site(request, id_site, pagina):
     todas_postagens = Postagens.objects.select_related("fk_rss__fk_sites").filter(fk_rss__fk_sites=id_site).filter(
@@ -144,6 +149,7 @@ def get_last_news_by_site(request, id_site, pagina):
                                                                        'data_adicionado', 'data_modificado',
                                                                        'horario_postagem_site'))
     return JsonResponse(serializedpage)
+
 
 @csrf_exempt
 def get_last_news_by_category(request, categoria, pagina):
@@ -168,6 +174,7 @@ def get_last_news_by_category(request, categoria, pagina):
                                                                        'data_adicionado', 'data_modificado',
                                                                        'horario_postagem_site'))
     return JsonResponse(serializedpage)
+
 
 @csrf_exempt
 def criar_usuario_rest(request):
@@ -207,6 +214,7 @@ def criar_usuario_rest(request):
         return JsonResponse(usuario_criado)
     else:
         return HttpResponse("Método não suportado")
+
 
 @csrf_exempt
 def logar_rest(request):

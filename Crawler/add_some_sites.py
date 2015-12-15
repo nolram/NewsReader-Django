@@ -49,4 +49,4 @@ class PrimeiraAdicao:
                     if c in self.cat_dict:
                         ob_rss_cat = rss_pagina.categorias.add(self.cat_dict[c])
 
-        print("Término do algoritmo...")
+        print("Termino do algoritmo...")
