@@ -2,6 +2,8 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Django default" uuid="64df6365-d791-48bf-960c-607a7096553d">
+      <user-name>flynadmin</user-name>
+      <user-password>dfccdfc6dff3dfc4dff8dfcfdfcbdfcedfefdff8df98df9adf9bdf9f</user-password>
       <schema-pattern>newsreader.pg_catalog newsreader.public</schema-pattern>
       <default-schemas>newsreader.pg_catalog newsreader.public</default-schemas>
     </data-source>

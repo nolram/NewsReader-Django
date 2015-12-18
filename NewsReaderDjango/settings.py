@@ -27,11 +27,9 @@ SECRET_KEY = 'iudhm*b^7!8ea5nrjgwz@m1(pkjq60acj0+9*h1_d6!!c(&yr3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-USING_SQLITE = False
-
 ALLOWED_HOSTS = []
 
-NO_SERVIDOR = False
+NO_SERVIDOR = True
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -56,8 +54,6 @@ CELERY_ALWAYS_EAGER = True
 CELERY_IGNORE_RESULT = True
 CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
 
-
-
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,17 +76,8 @@ ROOT_URLCONF = 'NewsReaderDjango.urls'
 
 WSGI_APPLICATION = 'NewsReaderDjango.wsgi.application'
 
-if USING_SQLITE:
-    DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-                'USER': '',
-                'PASSWORD': '',
-            }
-    }
-else:
-    DATABASES = {
+
+DATABASES = {
             'default': {
                 'HOST': 'localhost',
                 'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -120,7 +107,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+if NO_SERVIDOR:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#
 #if NO_SERVIDOR:
 #    STATICFILES_DIRS = (
 #        os.path.join(BASE_DIR, "static_root"),
@@ -159,12 +148,12 @@ TEMPLATES = [
 
 LOGIN_URL = '/login/'
 
-BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
+#BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
 
 #KRONOS_PYTHONPATH = "/home/nolram/Virtualenv/py3_django/bin/python3"
 
-if NO_SERVIDOR:
-    KRONOS_POSTFIX = "> /opt/flyn_django/log_thread.log 2>&1 "
-else:
-    KRONOS_PREFIX = "source /home/nolram/Virtualenv/py3_django/bin/activate &&"
-    KRONOS_POSTFIX = "> /home/nolram/log_thread.log 2>&1 "
+#if NO_SERVIDOR:
+#    KRONOS_POSTFIX = "> /opt/flyn_django/log_thread.log 2>&1 "
+#else:
+#    KRONOS_PREFIX = "source /home/nolram/Virtualenv/py3_django/bin/activate &&"
+#    KRONOS_POSTFIX = "> /home/nolram/log_thread.log 2>&1 "
