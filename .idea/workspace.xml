@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfdfb907-4c04-4420-8ef4-1f25da7accd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsreader_celery.conf" afterPath="$PROJECT_DIR$/newsreader_celery.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newsreader_celerybeat.conf" afterPath="$PROJECT_DIR$/newsreader_celerybeat.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gunicorn_config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="NewsReaderDjango.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,11 +109,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index_logado.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_logado.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1865285">
+            <state vertical-scroll-proportion="-4.0">
               <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.642858">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gunicorn_config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gunicorn_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.02970297">
+              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -146,7 +166,6 @@
         <option value="$PROJECT_DIR$/python_dependences.sh" />
         <option value="$PROJECT_DIR$/scripts/crawler_rss_thread_v2.py" />
         <option value="$PROJECT_DIR$/scripts/run_idle.py" />
-        <option value="$PROJECT_DIR$/gunicorn_config.py" />
         <option value="$PROJECT_DIR$/flyn_nginx" />
         <option value="$PROJECT_DIR$/Crawler/management/commands/coletar_rss.py" />
         <option value="$PROJECT_DIR$/flyn_script.conf" />
@@ -177,7 +196,6 @@
         <option value="$PROJECT_DIR$/NewsReaderDjango/__init__.py" />
         <option value="$PROJECT_DIR$/NewsReaderDjango/urls.py" />
         <option value="$PROJECT_DIR$/NewsReaderDjango/celery.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Crawler/crawler_rss_thread_v2.py" />
         <option value="$PROJECT_DIR$/Crawler/tasks.py" />
         <option value="$PROJECT_DIR$/Crawler/utils.py" />
@@ -187,6 +205,8 @@
         <option value="$PROJECT_DIR$/NewsReaderDjango/settings.py" />
         <option value="$PROJECT_DIR$/newsreader_celery.conf" />
         <option value="$PROJECT_DIR$/newsreader_celerybeat.conf" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/gunicorn_config.py" />
       </list>
     </option>
   </component>
@@ -606,13 +626,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/run_idle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2535211">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python_dependences.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -888,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18685122">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/celerybeat-schedule">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1000,8 +1005,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/index_logado.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1865285">
+        <state vertical-scroll-proportion="-4.0">
           <caret line="108" column="44" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.642858">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gunicorn_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02970297">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
           <folding />
         </state>
       </provider>

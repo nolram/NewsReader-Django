@@ -13,4 +13,4 @@
 * pip install python-dateutil
 * pip install gunicorn
 
-gunicorn -c /opt/flyn_django/django_virtualenv/gunicorn_config.py NewsReaderDjango.wsgi
+gunicorn -c /opt/py3django/gunicorn_config.py NewsReaderDjango.wsgi
