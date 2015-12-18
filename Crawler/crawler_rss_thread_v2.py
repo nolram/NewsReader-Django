@@ -1,5 +1,3 @@
-__author__ = 'nolram'
-
 import sys
 import django
 import requests
@@ -17,6 +15,8 @@ from django.db.models import F
 
 from threading import Thread
 from queue import Queue
+
+__author__ = 'nolram'
 
 CONCURRENT = 10
 

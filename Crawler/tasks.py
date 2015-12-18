@@ -9,7 +9,7 @@ __author__ = 'nolram'
 
 
 @periodic_task(
-    run_every=(crontab(minute='*/5')),
+    run_every=(crontab(minute='*/15')),
     name="crawling_news_rss",
     ignore_result=True
 )

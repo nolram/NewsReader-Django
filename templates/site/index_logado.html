@@ -105,7 +105,10 @@
             var postagem = data.object_list;
             $.each(postagem, function(i, post){
                 var titulo = post.fields.titulo;
-                var texto = post.fields.texto.substring(0, 300);
+                var texto = post.fields.texto;
+                var regex = /(<([^>]+)>)/ig;
+                texto = texto.replace(regex, "");
+                texto = texto.substring(0, 300);
                 var data = new Date(post.fields.horario_postagem_site);
                 var mes = data.getMonth() + 1;
                 if(contador == 2 && i == 0){

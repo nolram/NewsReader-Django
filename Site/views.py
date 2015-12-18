@@ -13,7 +13,7 @@ from django.http import Http404
 #from haystack.query import SearchQuerySet
 
 from Crawler.models import Postagens, Categorias, Tags, TagsPostagens
-from Site.forms import PesquisaForms
+#from Site.forms import PesquisaForms
 from Site.models import ProvidersUser, ProvedoresDeLogin, TokenLogin
 
 

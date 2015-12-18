@@ -1,5 +1,3 @@
-__author__ = 'nolram'
-
 import json
 import html
 import operator
@@ -15,6 +13,8 @@ from django.db.utils import IntegrityError
 from lxml.html.clean import Cleaner
 
 from Crawler.models import Imagens
+
+__author__ = 'nolram'
 
 SEMANAS = {"Seg": "Mon",
            "Ter": "Tue",

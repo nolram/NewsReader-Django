@@ -25,7 +25,7 @@ def do_crawling(site):
     Função de crawling de notícias pelos links RSS.
     IMPORTANTE: Se houver alguma excessão não tratada a função nunca chegará em q.task_done()
     e a Thread nunca se encerrará
-    :param q: Queue()
+    :param Site
     :return: None
     """
     try:

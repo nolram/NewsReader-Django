@@ -34,7 +34,6 @@ ALLOWED_HOSTS = []
 NO_SERVIDOR = False
 
 INSTALLED_APPS = (
-    'bootstrap_admin',
     'django.contrib.admin',
     'django.contrib.sites',
     'django.contrib.auth',
