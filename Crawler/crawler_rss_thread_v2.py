@@ -20,9 +20,12 @@ from queue import Queue
 
 CONCURRENT = 10
 
-DEBUG = False
+DEBUG = True
 
 django.setup()
+
+fp.PREFERRED_XML_PARSERS.remove('drv_libxml2')
+
 
 def do_crawling(q):
     """
@@ -38,6 +41,7 @@ def do_crawling(q):
             mensagem = ""
             if DEBUG:
                 mensagem += "== {0} - Coletando: {1} == \n".format(timezone.now(), site.link_rss)
+
             coleta = fp.parse(site.link_rss)
             if "entries" in coleta:
                 for col in range(0, len(coleta.entries)):

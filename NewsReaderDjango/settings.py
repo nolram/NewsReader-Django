@@ -18,10 +18,6 @@ from celery import Celery
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 ENV_PATH = os.path.abspath(os.path.dirname(__file__))
 
-app = Celery('celery_haystack')
-app.config_from_object('django.conf:settings')
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -30,8 +26,6 @@ SECRET_KEY = 'iudhm*b^7!8ea5nrjgwz@m1(pkjq60acj0+9*h1_d6!!c(&yr3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-TEMPLATE_DEBUG = True
 
 USING_SQLITE = False
 
@@ -48,8 +42,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'haystack',
-    #'celery_haystack',
     #'djcelery',
 
     'Site',
@@ -60,11 +52,12 @@ INSTALLED_APPS = (
 
 #HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
 
-#BROKER_TRANSPORT = "memory"
-#CELERY_ALWAYS_EAGER = True
-#CELERY_IGNORE_RESULT = True
-#CELERYD_LOG_LEVEL = "DEBUG"
-#CELERY_DEFAULT_QUEUE = "celery-haystack"
+BROKER_TRANSPORT = "memory"
+CELERY_ALWAYS_EAGER = True
+CELERY_IGNORE_RESULT = True
+CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -127,15 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-if NO_SERVIDOR:
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, "static_root"),
-    )
-else:
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, "static"),
-    )
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+#if NO_SERVIDOR:
+#    STATICFILES_DIRS = (
+#        os.path.join(BASE_DIR, "static_root"),
+#    )
+#else:
+#    STATICFILES_DIRS = (
+#        os.path.join(BASE_DIR, "Site/static"),
+#    )
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
