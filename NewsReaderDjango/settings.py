@@ -46,7 +46,7 @@ INSTALLED_APPS = (
     'Site',
     'Crawler',
     'sorl.thumbnail',
-    'kronos',
+    #'kronos',
 )
 
 #HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
@@ -92,6 +92,7 @@ if USING_SQLITE:
 else:
     DATABASES = {
             'default': {
+                'HOST': 'localhost',
                 'ENGINE': 'django.db.backends.postgresql_psycopg2',
                 'NAME': 'newsreader',
                 'USER': 'flynadmin', #'postgres',
