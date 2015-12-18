@@ -4,7 +4,7 @@ server {
         access_log off;
 
         location /static/ {
-            alias /opt/myenv/static/;
+            alias /opt/py3django/newsreaderdjango/static/;
         }
 
         location / {

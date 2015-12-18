@@ -62,3 +62,4 @@ NewsReaderDjango/media/
 db.sqlite3
 
 media/
+static/
