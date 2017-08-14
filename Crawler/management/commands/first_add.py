@@ -1,9 +1,10 @@
-__author__ = 'nolram'
-from django.core.management.base import NoArgsCommand
-
+from django.core.management.base import BaseCommand
 from Crawler.add_some_sites import PrimeiraAdicao
 
-class Command(NoArgsCommand):
-    def handle_noargs(self, **options):
+__author__ = 'nolram'
+
+
+class Command(BaseCommand):
+    def handle(self, *args, **options):
         pa = PrimeiraAdicao()
         pa.add_pages()

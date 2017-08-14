@@ -10,6 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 django.setup()
 
+
 class PrimeiraAdicao:
 
     def __init__(self):

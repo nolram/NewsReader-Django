@@ -78,14 +78,18 @@ WSGI_APPLICATION = 'NewsReaderDjango.wsgi.application'
 
 
 DATABASES = {
-            'default': {
-                'HOST': 'localhost',
-                'ENGINE': 'django.db.backends.postgresql_psycopg2',
-                'NAME': 'newsreader',
-                'USER': 'flynadmin', #'postgres',
-                'PASSWORD': 'flYnReadER2015', #'12345678',
-            }
-    }
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'postgres',
+        'USER':  'postgres',
+        'PASSWORD': 'docker',
+        'HOST': 'db',
+        'PORT': '5432',
+        'TEST': {
+            'NAME': 'test_crawler',
+        },
+    },
+}
 
 TIMEOUT = 10000
 
